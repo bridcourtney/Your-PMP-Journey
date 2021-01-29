@@ -5,7 +5,7 @@
 
 User Story ID | As a          |  I want to be able to | So that I can
 ------------  | ------------- |  ------------        | -------------
-  ||                 **Viewing and Navigation**         || 
+  |||                 **Viewing and Navigation**          
 1 | Shopper | View a list of Products | Select Products to Purchase
 2 | Shopper | View a list of Services | Select Services to Purchase
 3 | Shopper | Quickly Identify Promotions and Special Offers | Take advantage of Special Offers
