@@ -2,7 +2,8 @@
 
 # User Experience (UX)
 
-User Story ID | As a          |  I want to be able to | So that I can
+## User Stories
+ID | As a          |  I want to be able to | So that I can
 ------------  | ------------- |  ------------        | -------------
   ||| **Viewing and Navigation**          
 1 | Shopper | View Website easily on all my Devices | Ensure the websites usability no matter what device
