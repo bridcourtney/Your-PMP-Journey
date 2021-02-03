@@ -3,6 +3,9 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
   
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
