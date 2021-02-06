@@ -36,11 +36,6 @@ def all_products(request):
             categories = Category.objects.filter(name__in=categories)
 
 
-        if 'book_type' in request.GET:
-            categories = request.GET['book_type'].split(',')
-            products = products.filter(book_type__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
-
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
