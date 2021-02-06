@@ -18,6 +18,17 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    HARDBACK = 'Hardback'
+    KINDLE = 'Kindle'
+    PAPERBACK = 'Paperback'
+    NONE = 'None'
+    BOOK_TYPE_CHOICES = [
+        (HARDBACK, 'Hardback'),
+        (KINDLE, 'Kindle'),
+        (PAPERBACK, 'Paperback'),
+        ('', '')
+    ]
+    book_type = models.CharField(max_length=254, choices=BOOK_TYPE_CHOICES, blank=True, default='')
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)

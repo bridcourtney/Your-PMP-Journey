@@ -10,6 +10,18 @@ body {
     font-family: 'Josefin Sans', sans-serif;  
 }
 
+.type-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: rgb(97, 91, 91);
+  padding: 0 10px;
+  margin: 5px;
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
