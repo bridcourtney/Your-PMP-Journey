@@ -10,18 +10,6 @@ body {
     font-family: 'Josefin Sans', sans-serif;  
 }
 
-.type-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  background-color:black;
-  padding: 0 10px;
-  margin: 5px;
-  font-size: 1.25rem;
-  opacity: 0.8;
-}
-
 /* from Bulma */
 .icon {
     align-items: center;
@@ -96,6 +84,34 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+/* -------------------------------- book_type div on product image */
+.type-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color:black;
+  padding: 0 10px;
+  margin: 5px;
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
