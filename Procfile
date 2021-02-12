@@ -1,0 +1,1 @@
+web: gunicorn your_pmp_journey.wsgi:application
