@@ -1,0 +1,10 @@
+<form method="post" action="{% url 'adjust_bag' item.id %}">
+                                            {% csrf_token %}
+                                            <div class="input-group">
+                                                <div class="input-group-append align-self-center">Qty</div>
+                                                <input name="quantity" type="number" min="0" max="999" class="form-control" value="{{item.quantity}}">
+                                                <span class="input-group-btn">
+                                                    <button type="submit" class="btn btn-black rounded-0 btn-md"><i class="fa fa-edit"></i>&nbspUpdate</button>
+                                                </span>
+                                            </div>
+                                        </form>
