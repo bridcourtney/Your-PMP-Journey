@@ -3,11 +3,36 @@ html {
 }
 
 body {
-    background: url('/media/hp1.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
     color: #555555;
     font-family: 'Josefin Sans', sans-serif;  
+}
+
+.container-top{
+    margin-left: 0px; 
+    margin-right: 0px; 
+    padding-left: 0px; 
+    padding-right: 0px;
+}
+
+.carousel-item img{
+height: 500px; 
+}
+
+.carousel-caption{
+    right: 5%;
+    top: 20%;
+    position: absolute;
+    text-align: right;
+    color:black;
+    height:50%;
+}
+
+.carousel-item img{
+    margin: auto;
+}
+
+.h1, h1 {
+    font-size: 3.5rem;
 }
 
 /* from Bulma */
@@ -288,7 +313,7 @@ a.category-badge > span.badge:hover {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 90px;
     }
 
     body {
