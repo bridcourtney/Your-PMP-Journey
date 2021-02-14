@@ -19,12 +19,12 @@ height: 500px;
 }
 
 .carousel-caption{
-    right: 5%;
+    right: 5rem;
     top: 20%;
     position: absolute;
     text-align: right;
     color:black;
-    height:50%;
+    height:100%;
 }
 
 .carousel-item img{
