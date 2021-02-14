@@ -123,18 +123,22 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-/* -------------------------------- book_type div on product image */
-.type-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  background-color:black;
-  padding: 0 10px;
-  margin: 5px;
-  font-size: 1.25rem;
-  opacity: 0.8;
+.card-products{
+border-radius: 1;
+border-color:#ffc107;
 }
+
+.img-product-details{
+ padding: 5%;   
+}
+
+.img-product {
+ padding: 5%;
+ height: 223px; 
+ width: 175px;
+    
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -320,6 +324,7 @@ a.category-badge > span.badge:hover {
         height: calc(100vh - 116px);
     }
 
+
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
@@ -327,6 +332,7 @@ a.category-badge > span.badge:hover {
     .nav-link {
         padding: 0.15rem;
     }
+
 
     .nav-link i.fa-lg {
         font-size: 1rem;
