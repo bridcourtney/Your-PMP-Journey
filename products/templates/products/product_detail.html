@@ -27,7 +27,7 @@
             <div class="col-md-6">
                 <div class="card-body">
                     <p class="mb-0">{{ product.name }}{% if product.book_type %}
-                    ({{product.book_type}})
+                    <strong>({{product.book_type}})</strong>
                     {% endif %}</p>
                     <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                     {% if product.category %}
@@ -36,12 +36,8 @@
                             <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                         </a>
                     </p>
-                    {% endif %}
-                    {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                    <small class="text-muted">No Rating</small>
-                    {% endif %}
+                    {% endif %}                
+                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.get_rating }} / 5</small>
                     <p class="text-muted">by&nbsp{{ product.author }}</p>
                     <p class="mt-3">{{ product.description }}</p>
 
@@ -75,4 +71,58 @@
             </div>
         </div>
     </div>
+    <hr>
+   
+    <h2 class="subtitle">Reviews</h2>
+    <div class="reviews-wrapper">
+        {% for review in product.reviews.all %}
+            <div class="notifications space-below">
+                <p>
+                    <strong>Date:</strong>{{ review.created | date:"Y-M-D"}},
+                    <strong>Rating:</strong>{{ review.stars}},
+                </p>
+                {{review.content}}
+            </div>
+        {% empty %}
+            <div class="notification space-below">
+                No Reviews Yet
+            </div>
+        {% endfor %}
+        <div class="notification space-below">
+            {% if request.user.is_authenticated %}
+                <form method="POST" action="" class="form mb-2">
+                    {% csrf_token %}
+
+                    <div class="field">
+                        <label>Stars</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="stars" id="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3" selected>3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Content</label>
+                        <div class="control">
+                            <textarea name="content"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                                <button class="button is-success">Submit</button>
+                        </div>
+                    </div>
+                </form>
+                {% else %}
+                <p>Please sign in to add review</p>
+            {% endif %}
+        </div>
+    </div>
     {% endblock %}
+    

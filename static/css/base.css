@@ -35,6 +35,19 @@ height: 500px;
     font-size: 3.5rem;
 }
 
+.reviews-wrapper{
+padding: 50px 20px;
+text-align: center;
+background-color: #6c757d;
+}
+
+.reviews-wrapper .notification{
+margin-top: 20px;
+}
+
+.notification.space-below{
+    margin-bottom: 20px;
+}
 /* from Bulma */
 .icon {
     align-items: center;
