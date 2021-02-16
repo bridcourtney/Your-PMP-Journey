@@ -231,6 +231,22 @@ border-color:#ffc107;
 
 /* Allauth form formatting */
 
+/* Background image for account pages */
+.allauth-background {
+  background-image: url('/media/allAuthBG3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center 5%;
+}
+
+.allauth-form-wrapper {
+  background-color: white;
+  border-radius: 6px;
+  padding: 1rem;
+
+}
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
