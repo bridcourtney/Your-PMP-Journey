@@ -139,6 +139,7 @@ a.category-badge > span.badge:hover {
 .card-products{
 border-radius: 1;
 border-color:#ffc107;
+width: 100%;
 }
 
 .img-product-details{
