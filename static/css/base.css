@@ -221,6 +221,33 @@ width: 100%;
     overflow-y: auto;
 }
 
+/* Footer */
+
+.footer-background {
+    background: #343a40;
+}
+
+.footer-heading{
+   color: #ffc107; 
+   padding-top: 1rem;
+   text-transform: uppercase;
+   font-weight: 800;
+}
+
+.footer-link {
+    transition: all .15s ease-in-out;
+    color: white;
+}
+
+.footer-link:hover {
+    transform: scale(1.1);
+    color: #ffc107;
+}
+
+.nav-links{
+    padding-bottom: 2rem;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
