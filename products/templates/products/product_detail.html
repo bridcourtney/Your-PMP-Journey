@@ -72,27 +72,32 @@
         </div>
     </div>
     <hr>
-   
-    <h2 class="subtitle">Reviews</h2>
-    <div class="reviews-wrapper">
-        {% for review in product.reviews.all %}
-            <div class="notifications space-below">
-                <p>
-                    <strong>Date:</strong>{{ review.created | date:"Y-M-D"}},
-                    <strong>Rating:</strong>{{ review.stars}},
-                </p>
-                {{review.content}}
+    
+<div class="row">
+    <div class="col-6">
+         <h2 class="subtitle">Reviews</h2>
+            {% for review in product.reviews.all %}
+            <div class="card p-2">
+                <div class="card-header">
+                    <strong>Date:</strong>{{ review.created}},
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                    <p><strong>Rating:</strong>{{ review.stars}}, <strong>Rating:</strong>{{ review.content}}</p>
+                </div>
             </div>
-        {% empty %}
-            <div class="notification space-below">
-                No Reviews Yet
-            </div>
-        {% endfor %}
-        <div class="notification space-below">
+            {% empty %}
+                    No Reviews Yet
+            {% endfor %}           
+        </div>
+       
+
+     <div class="col-6">
+         <h2 class="subtitle">Add a Reviews</h2>
+        <div class="p-1">
             {% if request.user.is_authenticated %}
                 <form method="POST" action="" class="form mb-2">
                     {% csrf_token %}
-
                     <div class="field">
                         <label>Stars</label>
                         <div class="control">
@@ -124,5 +129,9 @@
             {% endif %}
         </div>
     </div>
+</div>
+   
+            
+        
     {% endblock %}
     
