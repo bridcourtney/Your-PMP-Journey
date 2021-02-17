@@ -1,4 +1,12 @@
-The Journeaccquiring the y to 
+The Journey to accopplishing  the PMP (pROJECT Management Professional) accreditation is not easy.  It reuiquires hours of study and thats after you complete the 35 hour course.  This website  is a guide to persons on the pmp trial.  It provides study resources and of course the first step, the 35 hour course.
+
+PMP certification can also be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one
+
+The fail rate for the PMP exam is actually quite high at an estimated 40-50% for first-time test-takers. There is no specific number of questions that must be answered correctly in order to pass the PMP exam.  This is high and can be a costly journey.  
+
+Anyone who aspires to attain PMP certification should be prepared for the exam. Consequently, first-time test takers should also be advised that the PMP certification exam is extremely difficult. The exam consists of 200 multiple-choice questions in a period of only four hours.
+
+PMP certification can also be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one
 
 # User Experience (UX)
 
