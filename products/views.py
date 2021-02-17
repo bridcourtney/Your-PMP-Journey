@@ -9,6 +9,18 @@ from .forms import ProductForm
 
 # Create your views here.
 
+
+def all_reviews(request):
+    """ A view to show all reviews """
+    reviews = ProductReview.objects.all()
+
+    context = {
+        'reviews': reviews,
+    }
+
+    return render(request, 'home/includes/reviews.html', context)
+
+
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
