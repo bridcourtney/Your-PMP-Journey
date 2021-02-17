@@ -8,12 +8,18 @@ Anyone who aspires to attain PMP certification should be prepared for the exam. 
 
 PMP certification can also be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one
 
+https://www.greycampus.com/blog/project-management/top-reasons-for-failing-in-the-pmp-exam
+
+gimp - flip
+
+
+
 # User Experience (UX)
 
 ## User Stories
 ID | As a          |  I want to be able to | So that I can
 ------------  | ------------- |  ------------        | -------------
-  ||| **Viewing and Navigation**          
+||| **Viewing and Navigation**          
 1 | Shopper | View Website easily on all my Devices | Ensure the websites usability no matter what device
 2 | Shopper | View a list of Products & Courses | Select Products & Courses to Purchase
 3 | Shopper | View individual Product & Course Details | Select Courses to Purchase
