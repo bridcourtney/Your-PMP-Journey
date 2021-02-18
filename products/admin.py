@@ -26,6 +26,7 @@ class ProductReviewAdmin(admin.ModelAdmin):
         'product',
         'user',
         'created',
+        'image',
     )
 
 

@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+
 class Category(models.Model):
 
     class Meta:
@@ -39,10 +40,14 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
+
     def __str__(self):
         return self.name
 
     def get_rating(self):
+        """
+        this fuction caculates the average customer rating
+        """
         self.total = sum(int(review['stars']) for review in self.reviews.values())
         if self.total > 0:
             return round(self.total / self.reviews.count(),1)
@@ -56,6 +61,8 @@ class ProductReview(models.Model):
     stars = models.IntegerField(null=False, blank=False, default=0)
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
+    image = models.ImageField(null=True, blank=True)
+
 
     def __str__(self):
         return self.title

@@ -1,5 +1,5 @@
 <!--https://stackoverflow.com/questions/60953929/slider-in-django-website-using-bootstrap4-carousel-->
-<h2>review</h2>
+<h2>Customer Product Reviews</h2>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -16,20 +16,23 @@
     <div class="carousel-inner">
         {% for review in reviews %}
             {% if forloop.first %}
-                <div class="carousel-item active  ">
+                <div class="carousel-item active">
             {% else %}
-                <div class="carousel-item  ">
+                <div class="carousel-item">
             {% endif %}
-            <div class="card">
-                <div class="card-header">
-                    {{review.product}} 
-                </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                    <p>{{review.content}}</p>
-                    <footer class="blockquote-footer"><cite title="Source Title">{{review.stars}} </cite></footer>
-                    </blockquote>
-                </div>
+                    <div class="card-products card mb-2">
+                        <div class="row g-0">
+                            <div class="col-md-3">
+                            <img class="card-img-top mx-auto d-block" style="width: 117px; height: 150px;" src="{{ review.image.url }}" alt="{{review.product}}">
+                            </div>
+                            <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title">{{review.product}} </h5>
+                                <p class="card-text">{{review.content}} </p>
+                                <p class="card-text"><small class="text-muted">{{review.stars}} </small></p>
+                            </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         {% endfor %}

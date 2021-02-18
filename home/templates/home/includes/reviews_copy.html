@@ -1,0 +1,37 @@
+<!--https://stackoverflow.com/questions/60953929/slider-in-django-website-using-bootstrap4-carousel-->
+<h2>review</h2>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        {% for review in reviews %}
+            {% if forloop.first %}
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" class="active"></li>
+            {% else %}
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"></li>
+
+            {% endif %}
+        {% endfor %}
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        {% for review in reviews %}
+            {% if forloop.first %}
+                <div class="carousel-item active  ">
+            {% else %}
+                <div class="carousel-item  ">
+            {% endif %}
+            <div class="card">
+                <div class="card-header">
+                    {{review.product}} 
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                    <p>{{review.content}}</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">{{review.stars}} </cite></footer>
+                    </blockquote>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

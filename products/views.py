@@ -82,7 +82,7 @@ def product_detail(request, product_id):
         stars = request.POST.get('stars',3)
         content = request.POST.get('content','')
 
-        review = ProductReview.objects.create(product=product,user=request.user, stars=stars, content=content)
+        review = ProductReview.objects.create(product=product,user=request.user, stars=stars, content=content, image=product.image)
         messages.success(request, 'Successfully added Review!')
 
     context = {
