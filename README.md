@@ -1,3 +1,17 @@
+The Journey to accopplishing  the PMP (pROJECT Management Professional) accreditation is not easy.  It reuiquires hours of study and thats after you complete the 35 hour course.  This website  is a guide to persons on the pmp trial.  It provides study resources and of course the first step, the 35 hour course.
+
+PMP certification can also be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one
+
+The fail rate for the PMP exam is actually quite high at an estimated 40-50% for first-time test-takers. There is no specific number of questions that must be answered correctly in order to pass the PMP exam.  This is high and can be a costly journey.  
+
+Anyone who aspires to attain PMP certification should be prepared for the exam. Consequently, first-time test takers should also be advised that the PMP certification exam is extremely difficult. The exam consists of 200 multiple-choice questions in a period of only four hours.
+
+PMP certification can also be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one
+
+https://www.greycampus.com/blog/project-management/top-reasons-for-failing-in-the-pmp-exam
+
+gimp - flip
+
 
 
 # User Experience (UX)
@@ -5,7 +19,7 @@
 ## User Stories
 ID | As a          |  I want to be able to | So that I can
 ------------  | ------------- |  ------------        | -------------
-  ||| **Viewing and Navigation**          
+||| **Viewing and Navigation**          
 1 | Shopper | View Website easily on all my Devices | Ensure the websites usability no matter what device
 2 | Shopper | View a list of Products & Courses | Select Products & Courses to Purchase
 3 | Shopper | View individual Product & Course Details | Select Courses to Purchase
