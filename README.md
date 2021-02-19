@@ -12,7 +12,7 @@ https://www.greycampus.com/blog/project-management/top-reasons-for-failing-in-th
 
 gimp - flip
 
-
+added bag_tools for subtotal
 
 # User Experience (UX)
 
