@@ -7,6 +7,19 @@ from profiles.models import UserProfile
 from .models import Testimonial
 from django.contrib.auth.models import User
 
+
+def testimonials(request):
+    """ A view to show all testimonial """
+    testimonials = Testimonial.objects.all()
+
+    context = {
+        'testimonials': testimonials,
+    }
+
+    return render(request, 'home/includes/testimonials.html', context)
+
+
+
 @login_required
 def add_testimonial(request):
     """
@@ -14,10 +27,11 @@ def add_testimonial(request):
     """
     if request.method == 'POST':
         # Get values from form
+        profile = UserProfile.objects.get(user=request.user)
         form = Testimonial(
-            title=request.POST.get('title'),
             content=request.POST.get('content'),
             image=request.POST.get('image'),
+            full_name = profile.default_full_name,
             user=request.user
         )
 

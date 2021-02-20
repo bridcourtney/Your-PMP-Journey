@@ -1,0 +1,43 @@
+<!--https://stackoverflow.com/questions/60953929/slider-in-django-website-using-bootstrap4-carousel-->
+<h2>Customer Testimonials</h2>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        {% for testimonial in testimonials %}
+            {% if forloop.first %}
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" class="active"></li>
+            {% else %}
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"></li>
+
+            {% endif %}
+        {% endfor %}
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        {% for testimonial in testimonials %}
+            {% if forloop.first %}
+                <div class="carousel-item active">
+            {% else %}
+                <div class="carousel-item">
+            {% endif %}
+                    <div class="card-products card mb-2">
+                        <div class="row g-0">
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{testimonial.full_name}} </h5>
+                                    <p class="card-text">{{testimonial.content}} </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                 {% if testimonial.image %}
+                                <img class="card-img-top mx-auto d-block" style="width: 117px; height: 150px;" src="{{ testimonial.image.url }}" alt="User Testomonial">
+                            {% else %}
+                                <img class="card-img-top mx-auto d-block" style="width: 152px; height: 150px;" src="{{ MEDIA_URL }}pmp.png" alt="PMP Logo">
+                            {% endif %}
+                            </div>
+                        </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

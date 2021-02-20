@@ -4,14 +4,14 @@ from .models import Testimonial
 # Register your models here.
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = (
-        'title',
         'user',
         'content',
         'created',
         'image',
+        'full_name',
     )
 
-    ordering = ('title',)
+    ordering = ('user',)
 
 
 admin.site.register(Testimonial, TestimonialAdmin)
