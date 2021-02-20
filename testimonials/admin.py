@@ -7,7 +7,6 @@ class TestimonialAdmin(admin.ModelAdmin):
         'user',
         'content',
         'created',
-        'image',
         'full_name',
     )
 

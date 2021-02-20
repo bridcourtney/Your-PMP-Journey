@@ -10,7 +10,6 @@ class Testimonial(models.Model):
     content = models.TextField()
     created = models.DateField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.title

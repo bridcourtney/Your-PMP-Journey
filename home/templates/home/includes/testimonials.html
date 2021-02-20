@@ -28,12 +28,8 @@
                                     <p class="card-text">{{testimonial.content}} </p>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                 {% if testimonial.image %}
-                                <img class="card-img-top mx-auto d-block" style="width: 117px; height: 150px;" src="{{ testimonial.image.url }}" alt="User Testomonial">
-                            {% else %}
-                                <img class="card-img-top mx-auto d-block" style="width: 152px; height: 150px;" src="{{ MEDIA_URL }}pmp.png" alt="PMP Logo">
-                            {% endif %}
+                            <div class="col-md-3">                              
+                                <img class="card-img-top mx-auto d-block" style="width: 152px; height: 150px;" src="{{ MEDIA_URL }}pmp.png" alt="PMP Logo">             
                             </div>
                         </div>
                 </div>

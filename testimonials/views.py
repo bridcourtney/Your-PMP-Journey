@@ -30,7 +30,6 @@ def add_testimonial(request):
         profile = UserProfile.objects.get(user=request.user)
         form = Testimonial(
             content=request.POST.get('content'),
-            image=request.POST.get('image'),
             full_name = profile.default_full_name,
             user=request.user
         )
