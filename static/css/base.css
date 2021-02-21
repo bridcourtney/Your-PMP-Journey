@@ -132,6 +132,7 @@ border-color:#ffc107;
 width: 100%;
 }
 
+
 .img-product-details{
  padding: 5%;   
 }
@@ -243,8 +244,21 @@ width: 100%;
 /*Contact page*/
 
 #map {
-    min-height:18.75rem;
+    min-height:18rem;
     height: 30vh;
+}
+
+/*Review page*/
+
+.card-reviews{
+width: 100%;
+border-color:white;
+}
+
+/*course page included on Homepage*/
+
+.index-course-container{
+background-color: #343a40;
 }
 
 /* -------------------------------- Media Queries */
