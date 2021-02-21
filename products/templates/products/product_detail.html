@@ -93,10 +93,13 @@
        
 
      <div class="col-6">
-         <h2 class="subtitle">Add a Reviews</h2>
-        <div class="p-1">
-            {% if request.user.is_authenticated %}
-                <form method="POST" action="" class="form mb-2">
+         {% if request.user.is_authenticated %}
+            <div class="card">
+                <div class="card-header">
+                    Add a Reviews
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><form method="POST" action="" class="form mb-2">
                     {% csrf_token %}
                     <div class="field">
                         <label>Stars</label>
@@ -118,16 +121,22 @@
                             <textarea name="content"></textarea>
                         </div>
                     </div>
-                    <div class="field">
-                        <div class="control">
-                                <button class="button is-success">Submit</button>
-                        </div>
-                    </div>
-                </form>
+                   
+                                <button class="btn btn-black rounded-0 text-uppercase mt-5">Submit</button>
+    
+                </p>
+                   
+                </div>
+            </div>
+       
+            
+                
                 {% else %}
                 <p>Please sign in to add review</p>
             {% endif %}
         </div>
+    </div>
+   
     </div>
 </div>
    

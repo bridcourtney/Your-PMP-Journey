@@ -1,5 +1,5 @@
 <!--https://stackoverflow.com/questions/60953929/slider-in-django-website-using-bootstrap4-carousel-->
-<h2>Customer Testimonials</h2>
+<h2 class="text-center p-2">Testimonials</h2>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -24,8 +24,8 @@
                         <div class="row g-0">
                             <div class="col-md-9">
                                 <div class="card-body">
-                                    <h5 class="card-title">{{testimonial.full_name}} </h5>
-                                    <p class="card-text">{{testimonial.content}} </p>
+                                    <p class="card-text "><em>"{{testimonial.content}}"</em></p>
+                                    <p class="card-text ">-{{testimonial.full_name}}</p>
                                 </div>
                             </div>
                             <div class="col-md-3">                              

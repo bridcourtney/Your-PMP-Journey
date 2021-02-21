@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
-
 class Category(models.Model):
 
     class Meta:
@@ -54,6 +52,8 @@ class Product(models.Model):
         else:
             return self.total
 
+
+
 class ProductReview(models.Model):
     content = models.TextField()
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='reviews', related_query_name='reviews')
@@ -66,3 +66,5 @@ class ProductReview(models.Model):
 
     def __str__(self):
         return self.title
+
+

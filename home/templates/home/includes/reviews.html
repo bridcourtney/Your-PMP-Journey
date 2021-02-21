@@ -1,5 +1,5 @@
 <!--https://stackoverflow.com/questions/60953929/slider-in-django-website-using-bootstrap4-carousel-->
-<h2>Customer Product Reviews</h2>
+<h2 class="text-center p-2">Product Reviews</h2>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -23,7 +23,13 @@
                     <div class="card-products card mb-2">
                         <div class="row g-0">
                             <div class="col-md-3">
-                            <img class="card-img-top mx-auto d-block" style="width: 117px; height: 150px;" src="{{ review.image.url }}" alt="{{review.product}}">
+                            {% if review.image %}
+                             <img class="card-img-top mx-auto d-block" style="width: 117px; height: 150px;" src="{{ review.image.url }}" alt="{{review.product}}">       
+                            {% else %}
+    
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="">
+                            
+                            {% endif %}                           
                             </div>
                             <div class="col-md-9">
                             <div class="card-body">
