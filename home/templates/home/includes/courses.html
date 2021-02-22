@@ -22,8 +22,32 @@
        <div class="col-md-12 pt-3 pb-5" data-aos="fade-up" data-aos-duration="1100">
              <div class="card m-3 h-100">
                 <div class="card-body text-center">
-                    <p class="card-text">If you are interested in any of our courses please get in touch, if you book this course before the 11th October, we will give you €100 OFF the price!</p>
+                    <p class="card-text">If you are interested in any of our courses please get in touch.</p>
                     <a href="{% url 'contact' %}" class="btn btn-black rounded-0 text-uppercase">Contact Us</a>
+                     <div class="container h-100 d-flex justify-content-center pt-3">
+                        <div class="col-12 col-lg-6">
+                            <div class="table-responsive">
+                                <table class="table table-sm table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for date in dates %}
+                                            <tr>
+                                                <td>                                       
+                                                    {{ date.product }}
+                                                </td>
+                                                <td>{{ date.date_available  }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>  

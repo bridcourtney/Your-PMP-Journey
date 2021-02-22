@@ -30,6 +30,7 @@ class Product(models.Model):
     book_type = models.CharField(max_length=254, choices=BOOK_TYPE_CHOICES, blank=True, default='')
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
+    date_available = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     author = models.CharField(max_length=254)
     description = models.TextField()
@@ -65,6 +66,13 @@ class ProductReview(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return self.content
 
 
+class DatesAvailable(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='available', related_query_name='available')
+    date_available = models.CharField(max_length=254, null=True, blank=True)
+
+
+    def __str__(self):
+        return self.date_available
