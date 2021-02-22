@@ -7,19 +7,29 @@ class ContactUsForm(forms.Form):
     """
 
     full_name = forms.CharField(
-         label="Full Name"
-    )
-    email = forms.EmailField(
-        label="Email"
+        required=True,
+        label='Full Name',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter your Full Name'
+        })
     )
     message = forms.CharField(
-        label="Message",
+        required=True,
+        label='Message',
         widget=forms.Textarea(attrs={
-            "rows": 8,
+            'class': 'form-control',
+            'placeholder': 'Enter your Query Details'
+        })
+    )
+    email = forms.EmailField(
+        required=True,
+        label='Email',
+        widget=forms.EmailInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter your Email'
         })
     )
 
     class Meta:
         fields = ['full_name', 'email', 'message']
-
-
