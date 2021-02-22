@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, ProductReview
+from .models import Product, Category, ProductReview, DatesAvailable
 from .forms import ProductForm
 
 # Create your views here.
@@ -64,6 +64,7 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    
 
     #Add Review
     if request.method == 'POST' and request.user.is_authenticated:
@@ -83,6 +84,9 @@ def product_detail(request, product_id):
 def courses(request):
     """ A view to display all of the courses"""
     products = Product.objects.filter(is_a_service=True)
+    dates = DatesAvailable.objects.all()
+    
+
     query = None
     categories = None
     sort = None
@@ -109,6 +113,7 @@ def courses(request):
     current_sorting = f'{sort}_{direction}'
     context = {
         'products': products,
+        'dates': dates,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -120,10 +125,11 @@ def course_detail(request, product_id):
     """ A view to show individual course details """
 
     product = get_object_or_404(Product, pk=product_id)
-
+    dates = DatesAvailable.objects.filter(product_id = product_id)
     
     context = {
         'product': product,
+        'dates': dates,
     }
 
     return render(request, 'products/course_detail.html', context)
