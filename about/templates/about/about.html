@@ -11,18 +11,28 @@
 
 {% block content %}
 
-<div class="container-top col-lg-12 index-course-container" data-aos="fade-up" data-aos-duration="1000">
-    <h2 class="text-center pt-3 text-white">Our Courses</h2>
-   <div class="row">
-        <div class="col-md-6" data-aos="fade-up-right" data-aos-duration="1100">
-            <div class="card m-3 h-100">
+<div class="container-top col-lg-12 about-container" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row">
+       <div class="col-md-12 pt-3 pb-5" data-aos="fade-up" data-aos-duration="1100">
+             <div class="card m-3 h-100">
                 <div class="card-body text-center">
-                    <h5 class="card-title text-black">PMI® Authorized PMP® Exam Prep Course</h5>
-                    <i class="fas fa-graduation-cap fa-lg icon-course"></i>
-                    <p class="card-text">Our 5 day PMP exam preparation course supports you from the PMP application process right through to success at the PMP certification exam.</p>
-                    <a href="{% url 'courses' %}" class="btn btn-black rounded-0 text-uppercase">View Course</a>
+                    <p class="card-text">Velopi is an approved provider of project management training by the Project Management Institute (PMI).   As a PMI Authorized Training Partner (ATP), Velopi's training courses have been reviewed against PMI's Quality Assurance guidelines.</p>
                 </div>
             </div>
+        </div>  
+    </div>
+    <div class="row">
+        <div class="col-md-6" data-aos="fade-up-right" data-aos-duration="1100">
+            <div class="card">
+                                                <form>
+                                                    <div class="form-group text-center">
+                                                        <div class="row justify-content-md-center">
+                                                            <p><i class="fas fa-envelope"></i> <u>Nicola.Finlay@abbott.com</u><br><i class="fas fa-phone"></i> +353 71-9156268<br><i class="fas fa-mobile-alt"></i> 0872843560<br><br>
+                                                                <b style="padding-left: 10px; padding-right: 10px;"><u>Areas of Responsibility</u></b><br><i class="fas fa-check-circle"></i> Employee Relations <br><i class="fas fa-check-circle"></i> Compensation & Benefits <br><i class="fas fa-check-circle"></i> Business Support<br><i class="fas fa-check-circle"></i> L&D</p>
+                                                        </div>
+                                                    </div>                           
+                                                </form>
+                                            </div>
         </div>   
         <div class="col-md-6 pb-8" data-aos="fade-up-left" data-aos-duration="1100">
              <div class="card m-3 h-100">
@@ -35,16 +45,7 @@
             </div>           
         </div>   
     </div>
-    <div class="row">
-       <div class="col-md-12 pt-3 pb-5" data-aos="fade-up" data-aos-duration="1100">
-             <div class="card m-3 h-100">
-                <div class="card-body text-center">
-                    <p class="card-text">If you are interested in any of our courses please get in touch.</p>
-                    <a href="{% url 'contact' %}" class="btn btn-black rounded-0 text-uppercase">Contact Us</a>
-                </div>
-            </div>
-        </div>  
-    </div>
+    
 </div>
 
 
