@@ -24,6 +24,10 @@ def add_to_bag(request, id):
     except:
         quantity = 1
 
+    
+    date_choice = request.POST.get('date_choice')
+    
+
     bag = request.session.get('bag', {})
     if id in bag:
         bag[id] = int(bag[id]) + quantity

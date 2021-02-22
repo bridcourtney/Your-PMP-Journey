@@ -1,3 +1,4 @@
 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-<p class="my-0"><strong>Type: </strong>{% if item.product.book_type %}{{ item.product.book_type |upper }}{% else %}N/A{% endif %}</p>
-<p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+<p class="my-0">{% if item.product.book_type %}<strong>Type: </strong>{{ item.product.book_type |upper }}{% endif %}</p>
+<p class="my-0">{% if item.product.sku %}<strong>SKU: </strong>{{ item.product.sku |upper }}{% endif %}</p>
+<p class="my-0">{% if item.product.date_choice %}<strong>SKU: </strong>{{ item.product.date_choice |upper }}{% endif %}</p>
