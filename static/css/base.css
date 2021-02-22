@@ -14,8 +14,9 @@ body {
     padding-right: 0px;
 }
 
-.carousel-item img{
-height: 500px; 
+.carousel-item-home img{
+min-height:40rem;
+  height: 60vh;
 }
 
 .carousel-caption{
@@ -216,6 +217,14 @@ width: 100%;
 
 /* Footer */
 
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
 .footer-background {
     background: #343a40;
 }
@@ -274,11 +283,11 @@ background-color: #343a40;
 
 /* Background image for account pages */
 .allauth-background {
-  background-image: url('/media/allAuthBG3.jpg');
+  background-image: url('/media/allAuthBG1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100%;
-  background-position: center 5%;
+  min-height:50rem;
+  height: 70vh;
 }
 
 .allauth-form-wrapper {

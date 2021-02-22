@@ -12,7 +12,7 @@ from .forms import ProductForm
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    products = Product.objects.filter(is_a_service=False)
     query = None
     categories = None
     sort = None
@@ -84,7 +84,6 @@ def product_detail(request, product_id):
 def courses(request):
     """ A view to display all of the courses"""
     products = Product.objects.filter(is_a_service=True)
-    dates = DatesAvailable.objects.all()
     
 
     query = None
@@ -113,7 +112,6 @@ def courses(request):
     current_sorting = f'{sort}_{direction}'
     context = {
         'products': products,
-        'dates': dates,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
