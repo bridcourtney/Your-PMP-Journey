@@ -30,7 +30,7 @@ class Product(models.Model):
     book_type = models.CharField(max_length=254, choices=BOOK_TYPE_CHOICES, blank=True, default='')
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
-    date_available = models.CharField(max_length=254, null=True, blank=True)
+    course_date = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     author = models.CharField(max_length=254)
     description = models.TextField()

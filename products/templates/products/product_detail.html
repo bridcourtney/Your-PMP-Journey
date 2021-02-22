@@ -80,11 +80,9 @@
             {% for review in product.reviews.all %}
             <div class="card p-2">
                 <div class="card-header">
-                    <strong>Date:</strong>{{ review.created}},
-                </div>
-                <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                    <p><strong>Rating:</strong>{{ review.stars}}, <strong>Rating:</strong>{{ review.content}}</p>
+                    <p>{{ review.created}}</p>
+                    <p>{{ review.stars}} / 5</p>
+                    <p>{{ review.content}}</p>
                 </div>
             </div>
             {% empty %}
