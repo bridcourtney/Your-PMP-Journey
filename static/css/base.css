@@ -255,6 +255,13 @@ footer {
     padding-bottom: 2rem;
 }
 
+/* About page */
+.about-img{
+    height:200px;
+    width: 100px;
+     
+}
+
 /*Contact page*/
 
 #map {
