@@ -10,14 +10,8 @@ Delivery: €{{ order.delivery_cost }}
 Grand Total: €{{ order.grand_total }}
 
 {% for item in order.lineitems.all %}
-{{item.date_choice}}
+{% if item.date_choice %},{{ item.product }} is booked for {{item.date_choice}} for {{item.quantity}} person,{% endif %}
 {% endfor %}
-
-Date Booked for: {{ order_line_item.c_date }}
-Date Booked for: {{ order_line_item.date_choice }}
-
-
-
 
 
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
