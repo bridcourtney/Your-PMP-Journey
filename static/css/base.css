@@ -17,6 +17,7 @@ body {
 /* Homepage */
 
 .carousel-item-home img{
+object-fit: cover;
 min-height:40rem;
   height: 60vh;
 }

@@ -67,6 +67,7 @@ class OrderLineItem(models.Model):
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    date_choice = models.CharField(max_length=20, null=True, blank=True)
 
     def save(self, *args, **kwargs):
         """

@@ -1,10 +1,13 @@
 <form method="post" action="{% url 'adjust_bag' item.id %}">
                                             {% csrf_token %}
                                             <div class="input-group">
-                                                <div class="input-group-append align-self-center">Qty</div>
+                                                <div class="input-group-append align-self-center">{% if item.product.is_a_service %}No. persons booked for{% else %}Qty{% endif %}</div>
                                                 <input name="quantity" type="number" min="0" max="999" class="form-control" value="{{item.quantity}}">
                                                 <span class="input-group-btn">
                                                     <button type="submit" class="btn btn-black rounded-0 btn-md"><i class="fa fa-edit"></i>&nbspUpdate</button>
                                                 </span>
                                             </div>
+                                             {% if item.product.is_a_service %}
+                                                <input type="hidden" name="date_choice" value="{{item.c_date}}">
+                                            {% endif %}
                                         </form>

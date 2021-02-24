@@ -1,7 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from products.models import Product, DatesAvailable
+from products.models import Product
 
 def bag_contents(request):
 
@@ -10,27 +10,15 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for id, item_data in bag.items():
-        if isinstance(item_data, int):
-            product = get_object_or_404(Product, pk=id)
-            total += item_data * product.price
-            product_count += item_data
-            bag_items.append({
-                'id': id,
-                'quantity': item_data,
-                'product': product,
-            })
-        else:
-            product = get_object_or_404(Product, pk=id)
-            for c_date, quantity in item_data['items_by_c_date'].items():
-                total += quantity * product.price
-                product_count += quantity
-                bag_items.append({
-                    'id': id,
-                    'quantity': quantity,
-                    'product': product,
-                    'c_date': c_date,
-                })
+    for id, quantity in bag.items():
+        product = get_object_or_404(Product, pk=id)
+        total += quantity * product.price
+        product_count += quantity
+        bag_items.append({
+            'id': id,
+            'quantity': quantity,
+            'product': product,
+        })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

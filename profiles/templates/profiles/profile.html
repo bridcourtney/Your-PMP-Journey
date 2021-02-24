@@ -56,10 +56,11 @@
                                     <td>
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
-                                                <li class="small">
-                                                    {% if item.product.book_type %}
-                                                        {{ item.product.book_type }}
-                                                    {% endif %}{{ item.product.name }} x {{ item.quantity }}
+                                                 <li class="small">
+                                                     {{ item.product.name }}
+                                                     {% if item.product.book_type %}{{ item.product.book_type}}{% endif %}
+                                                     {% if item.product.is_a_service %}Date Booked for: {{ item.date_choice}}{% endif %}  
+                                                    {% if item.product.is_a_service %}booked for {{ item.quantity }} person{%else%}{{ item.quantity }}{% endif %}  @ €{{ item.product.price }} each
                                                 </li>
                                             {% endfor %}
                                         </ul>

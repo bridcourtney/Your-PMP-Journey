@@ -31,7 +31,7 @@ class StripeWH_Handler:
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )        
+        )   
 
     def handle_event(self, event):
         """
@@ -59,12 +59,13 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
+        
         # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
-        if username != 'AnonymousUser':
-            profile = UserProfile.objects.get(user__username=username)
-            if save_info:
+        profile = UserProfile.objects.get(user__username=username)
+        if save_info:
+                profile.default_full_name = shipping_details.full_name
                 profile.default_phone_number = shipping_details.phone
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
@@ -73,7 +74,7 @@ class StripeWH_Handler:
                 profile.default_street_address2 = shipping_details.address.line2
                 profile.default_county = shipping_details.address.state
                 profile.save()
-
+        
         order_exists = False
         attempt = 1
         while attempt <= 5:
@@ -121,22 +122,12 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(bag).items():
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
+                    order_line_item = OrderLineItem(
                             order=order,
                             product=product,
                             quantity=item_data,
                         )
-                        order_line_item.save()
-                    else:
-                        for c_date, quantity in item_data['items_by_c_date'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                date_choice=c_date,
-                            )
-                            order_line_item.save()
+                    order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()

@@ -1,8 +1,9 @@
-from django.conf.urls import url
-from .views import view_bag, add_to_bag, adjust_bag
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    url(r'^$', view_bag, name='view_bag'),
-    url(r'^add/(?P<id>\d+)', add_to_bag, name='add_to_bag'),
-    url(r'^adjust/(?P<id>\d+)', adjust_bag, name='adjust_bag'),
+    path('', views.view_bag, name='view_bag'),
+    path('add/<item_id>/', views.add_to_bag, name='add_to_bag'),
+    path('adjust/<item_id>/', views.adjust_bag, name='adjust_bag'),
+    path('remove/<item_id>/', views.remove_from_bag, name='remove_from_bag'),
 ]
