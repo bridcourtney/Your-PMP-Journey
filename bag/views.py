@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 
 from products.models import Product, DatesAvailable
@@ -7,7 +7,7 @@ from products.models import Product, DatesAvailable
 
 def view_bag(request):
     """ A view that renders the bag contents page """
-
+        
     return render(request, 'bag/bag.html')
 
 def add_to_bag(request, item_id):
