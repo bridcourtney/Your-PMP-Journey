@@ -10,9 +10,10 @@ Delivery: €{{ order.delivery_cost }}
 Grand Total: €{{ order.grand_total }}
 
 {% for item in order.lineitems.all %}
-You have booked {% if item.date_choice %}{{ item.product }}, starting on the {{item.date_choice}} for {{item.quantity}} person{% endif %}
+You have booked {% if item.date_choice %}{{ item.product }}, starting on the {{item.date_choice}} for {{item.quantity}} person.  We will be in touch shortly with Course 
+itinerary & Details{% endif %}
 {% endfor %}
-{% if item.date_choice %}, we will be in touch a week before Course start with details{% endif %}
+
 
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
 
