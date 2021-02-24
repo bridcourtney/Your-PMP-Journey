@@ -39,14 +39,15 @@
                                                 </small>
                       <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                             {% csrf_token %}
-                                <label class="font-weight-bold">Select Date you will attend</label>
+                                <p class="font-weight-bold">Select Date you will attend:</p>
                                 <select class="form-control rounded-0 w-50" name="date_choice" id='date_choice'>
                                 {% for date in dates %}
                                 <option>{{ date.date_available }}</option>
                                 {% endfor %}
                                 </select>
+                                <p class="font-weight-bold pt-1">Enter number of places:</p>
                             <div class="input-group">
-                                <label class="font-weight-bold">Enter number of places</label>
+                                
                                 <input name="quantity" type="number" min="1" max="999" class="form-control"
                                     value="1">
                             </div>
