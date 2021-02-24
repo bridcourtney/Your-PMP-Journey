@@ -10,7 +10,7 @@ Delivery: €{{ order.delivery_cost }}
 Grand Total: €{{ order.grand_total }}
 
 {% for item in order.lineitems.all %}
-{% if item.date_choice %},{{ item.product }} is booked for {{item.date_choice}} for {{item.quantity}} person,{% endif %}
+You have booked {% if item.date_choice %}{{ item.product }}, starting on the {{item.date_choice}} for {{item.quantity}} person{% endif %}
 {% endfor %}
 
 
