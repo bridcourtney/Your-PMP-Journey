@@ -9,6 +9,9 @@ Order Total: ${{ order.order_total }}
 Delivery: ${{ order.delivery_cost }}
 Grand Total: ${{ order.grand_total }}
 
+{% if item.product.is_a_service %}Date Booked for: {{ item.date_choice}}{% endif %}
+{% if item.product.is_a_service %}booked for {{ item.quantity }} person{%else%}{{ item.quantity }}{% endif %} 
+
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
 
 We've got your phone number on file as {{ order.phone_number }}.
