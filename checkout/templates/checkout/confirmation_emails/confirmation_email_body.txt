@@ -11,9 +11,10 @@ Grand Total: €{{ order.grand_total }}
 
 
 {% for item in order.lineitems.all %}
+{{ item |length }}
 {% if item.date_choice %}You have booked the {{ item.product }}, starting on the {{item.date_choice}} for {{item.quantity}} person.  We will be in touch shortly with Course 
 itinerary & Details{% endif %}
-item.count()
+{{ item |length }}
 {% endfor %}
 
 
