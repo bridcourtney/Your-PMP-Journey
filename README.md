@@ -1,10 +1,10 @@
-- [Heading](UX)
+- [UX](#heading)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](Features)
+- [Heading](#heading-1)
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
-- [Heading](Information Architecture)
+- [Heading](#heading-2)
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
 
@@ -50,7 +50,6 @@ This is an h2 heading
 #### Sub-sub-heading
 
 This is an h3 heading
-
 
 
 The Journey to accopplishing  the PMP (pROJECT Management Professional) accreditation is not easy.  It reuiquires hours of study and thats after you complete the 35 hour course.  This website  is a guide to persons on the pmp trial.  It provides study resources and of course the first step, the 35 hour course.
