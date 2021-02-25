@@ -100,7 +100,7 @@ ID | As a          |  I want to be able to | So that I can
 
 -   ## Navbar
 
-    The navigation bar features the VDU Assessment Manager logo in the top left corner.
+    The navigation bar features the PMP Journey logo in the top left corner.
 
     For visitors to the site who are not logged in, 'Working Safely Guidance' liks are available for them to use on the Homepage.  Also the following links in the Navbar
 
