@@ -1,10 +1,10 @@
-- [1. Heading](#heading)
+1 [Heading](#heading)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
-- [2. Heading](#heading-1)
+2 [Heading](#heading-1)
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
-- [3. Heading](#heading-2)
+3 [Heading](#heading-2)
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
 
