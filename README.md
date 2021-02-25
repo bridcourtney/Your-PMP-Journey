@@ -113,7 +113,7 @@ ID | As a          |  I want to be able to | So that I can
        - Home
        - Log Out
        - Profile
-
+     <img src="/images/Responsice_ShowCase.JPG"></h2>
     
     Python determines if the user is logged in or not by checking if 'user' in session and passes this data to Jinja to display the correct navbar for the user.
 
