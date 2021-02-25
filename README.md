@@ -16,7 +16,7 @@ gimp - flip
 
 added bag_tools for subtotal
 
-1. User Experience (UX)
+# 1. User Experience (UX)
 
 -   ## Project Goals
 
