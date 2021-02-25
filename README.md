@@ -89,10 +89,10 @@ ID | As a          |  I want to be able to | So that I can
 
 -   ## Wireframes
     
-    These wireframes were created using Balsamiq and also outlines I created myself during the Scope Plane part of the design and planning process for this project.
+    Wireframes were built in the early stages of development to get a rough outline of the structure needed for the planned features of the site. The wireframes were created     using Balsamiq. These can be viewed below:
 
-    -   Home Page Wireframe - [View](Wireframes/HomePage.pdf)
-    -   Profile Page Wireframe - [View](Wireframes/Profile_Page.JPG)
+    -   Desktop & Tablet - [View](Wireframes/HomePage.pdf)
+    -   Mobile - [View](Wireframes/Profile_Page.JPG)
      -  User Assessment Report Wireframe - [View](Wireframes/Assessment_Report.JPG)
     
     
