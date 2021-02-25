@@ -1,10 +1,10 @@
-- [Heading](1. heading)
+- [Heading](UX)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](2. heading-1)
+- [Heading](Features)
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
-- [Heading](3. heading-2)
+- [Heading](Information Architecture)
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
 
