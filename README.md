@@ -1,7 +1,7 @@
 - [UX](#heading)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](#heading-1)
+- [UX](#heading-1)
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [Heading](#heading-2)
@@ -15,7 +15,7 @@
 
 <!-- toc -->
 
-## Heading
+## UX
 
 This is an h1 heading
 
