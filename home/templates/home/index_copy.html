@@ -2,22 +2,24 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
 <!--Carousal section-->
 {% include 'home/includes/carousal.html' %}
+
 <!--Testimonial section-->
 {% include 'home/includes/testimonials.html' %}
 
-<!--Courses section-->
+<!--Testimonial section-->
 {% include 'home/includes/courses.html' %}
+
 
 <!--Reviews section-->
 {% include 'home/includes/reviews.html' %}
