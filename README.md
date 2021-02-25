@@ -31,18 +31,22 @@ ID | As a          |  I want to be able to | So that I can
 ||| **Viewing and Navigation**          
 1 | Shopper | View Website easily on all my Devices | Ensure the websites usability no matter what device
 2 | Shopper | View a list of Products & Courses | Select Products & Courses to Purchase
-3 | Shopper | View individual Product & Course Details | Select Courses to Purchase
-4 | Shopper | Quickly Identify Promotions and Special Offers | View the Price, Description, Rating & Image
+3 | Shopper | View individual Product & Course Details | Select Courses by Date & products to Purchase
+4 | Shopper | View Site Users Product Reviews & customer rating | make a better choice by reading what Site User shared about their purchases and average Customer rating for each product
+4 | Shopper | View Site Users Course Testimonials | make a better choice by reading what Site User Course Testimonials
 5 | Shopper | Easily view the total of my purchases at each stage | Make sure I dont overspend
+5 | Shopper | Receive email order confirmation | Record of my transaction
 6 | Shopper | To read about the Business | Decide if I am going to find what I am looking for
 7 | Shopper | Contact the Business Owners| Submit any queries I have regarding Products & Courses
   ||| **Registation and User Accounts**
 8 | Site Users | Easily Register for an account | Have a personal account and be able to view my profile
 9 | Site Users | Easily Login & logout to my account | Access my personal account information
-10 | Site Users | Sign in with my already created social media account | Access with my gmail, facebook etc
+10 | Site Users | Add Product Reviews & Rating | help others make a better choice by reading about your purchases and the average Customer rating for each product
+10 | Site Users | Add Course Testimonials  | help others make a better choice by reading your Course Testimonial
 11 | Site Users | Easily recover my password if I forget | Recover access to my account
 12 | Site Users | Receive email confirmation when I register | Verify that my account registration was successful
 13 | Site Users | be personalised User | View and edit my profile details and view my order history
+5 |  Site Users | Receive email order confirmation | Record of my transaction
   ||| **Sorting & Searching**
 14| Shopper| Sort the list of available Products and Courses | Easily identify the best rated & catergorically sorted Products & Courses
 15| Shopper| Sort a specific category of Product or Course | Find the best price or best rated in a specific category
