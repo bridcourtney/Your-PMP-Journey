@@ -190,16 +190,19 @@ ID | As a          |  I want to be able to | So that I can
 
      <img src="/static/img/rating.png">
      
--   Registered User can access the Add Review from the Product Detail page.  As registered Users, their User ID is captured from the User Model
+-   Registered User can access the Add Review from the Product Detail page.  As registered Users, their User ID is captured from the User Model.
     
--   Add Testimonials on large device:
+-   Add Product Review on large device:
     
-    <img src="/static/img/test_add_lg.png">
+    <img src="/static/img/review_add_lg.png">
       
--   Add Testimonials on small device:
+-   Add Product Review on small device:
     
-    <img src="/static/img/test_add_sm.png">        
+    <img src="/static/img/review_add_sm.png">        
 
+-    Visitors can view the Products reviews for each product in the Products Details page, but are unable to submit a review.
+
+     <img src="/static/img/review_visitor.png">  
 
 -   ## Registration Page
      - The register page allows user's to create a new account. The user is asked to fill the fields "username","firstname","password" and "confirm password". When adding a             username, the code compares it against existing usernames to ensure that it is unique. A username must be 3-15 characters long. 
