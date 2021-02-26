@@ -148,7 +148,7 @@ ID | As a          |  I want to be able to | So that I can
     <img src="/static/img/car_sm.png">
         
      ### Customer Testimonials
--    Registered site Users have the option to add a Testimonial.  Our Customer Testimonials are displayed in a carousal.  Testimonials are maintainable in the Admin                section.    
+-    Registered site Users have the option to add a Testimonial.  Our Customer Testimonials are rendered from the Testimonial app and displayed in a carousal.  Testimonials are maintainable in the Admin                section.    
      
      <img src="/static/img/test_lg.png">
       
@@ -168,7 +168,7 @@ ID | As a          |  I want to be able to | So that I can
     
     
      ### Our Courses
--    This section showcases our Courses and Course Availability.  Course Availability is maintainable from the Admin section.    
+-    This section showcases our Courses and Course Availability.  Our Courses are rendered from the DatesAvailable Model in the Products app.  Course Availability is              maintainable from the Admin section.    
      
       <img src="/static/img/course_lg.png">
       
@@ -178,7 +178,7 @@ ID | As a          |  I want to be able to | So that I can
     <img src="/static/img/course_sm2.png">
 
     ### Product Reviews
--    Registered site Users have the option to add a Product Review.  Our Product Reviews are displayed in a carousal.  Product Reviews are maintainable in the Admin                section.  
+-    Registered site Users have the option to add a Product Review.  Our Product Reviews are rendered from the ProductReview Model in the Products app and displayed in a           carousal.  Product Reviews are maintainable in the Admin section.  
 
      <img src="/static/img/review_lg.png">
      
