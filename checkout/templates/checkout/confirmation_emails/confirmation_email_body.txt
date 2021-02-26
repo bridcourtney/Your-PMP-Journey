@@ -11,20 +11,16 @@ Grand Total: €{{ order.grand_total }}
 
 
 {% for item in order.lineitems.all %}
-{{ item |length }}
 {% if item.date_choice %}You have booked the {{ item.product }}, starting on the {{item.date_choice}} for {{item.quantity}} person.  We will be in touch shortly with Course 
 itinerary & Details{% endif %}
-{{ item |length }}
 {% endfor %}
 
 {% for item in order.lineitems.all %}
-{{ item |length }}
-{% if not item.date_choice %}shipped{% endif %}
-{{ item |length }}
+{% if not item.date_choice %}Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}{% endif %}
 {% endfor %}
 
 
-Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
 
 We've got your phone number on file as {{ order.phone_number }}.
 
