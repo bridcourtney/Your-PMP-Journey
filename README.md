@@ -274,7 +274,7 @@ ID | As a          |  I want to be able to | So that I can
     #### - User Maintenace
     In User Maintenance the Admin person can assign / unassign Manager and Admin privliges. The Admin User can also delete a User.  After clicking the "delete" button, the   delete modal will be triggered. The User will be prompted to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove User from the database
 # Information Architecture
- <img src="/static/img/ERD.PNG">
+ <img src="/static/img/ERD.png">
   <img src="/static/img/ERD_DETAIL.PNG">
 
 # Testing
