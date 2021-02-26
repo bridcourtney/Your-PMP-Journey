@@ -1,0 +1,46 @@
+  <div class="row">      
+     <div class="col-md-6">
+         {% if request.user.is_authenticated %}
+                <div class="card-header">
+                    Add a Reviews
+                </div>
+                <div class="card-body">
+                    <form class="form" method="POST" action="">
+                        {% csrf_token %}
+                        <p class="font-weight-bold">Select Stars:</p>
+                        <div class="input-group">
+                            <select class="form-control rounded-0 w-50" name="stars" id='stars'>          
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3" selected>3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>                           
+                            </select>
+                        </div>
+                        <p class="font-weight-bold pt-1">Enter your review:</p>
+                        <div class="input-group">
+                           <textarea name="content" rows="5" cols="40" placeholder="Enter your review" class="textarea form-control" required></textarea>
+                        </div>
+                         <button class="btn btn-black rounded-0 text-uppercase mt-1 text-center">Submit Review</button>
+                    </form>
+                </div>                                               
+                {% else %}
+                <p>Please sign in to add review</p>
+            {% endif %}
+        </div>
+    <div class="col-md-6">        
+         <h2 class="subtitle">Reviews</h2>
+            {% for review in product.reviews.all %}
+            <div class="card p-2">
+                <div class="card-header">
+                    <p>{{ review.created}}</p>
+                    <p>{{ review.stars}} / 5</p>
+                    <p>{{ review.content}}</p>
+                </div>
+            </div>
+            {% empty %}
+                    No Reviews Yet
+            {% endfor %}           
+        </div>
+    </div>
+    
