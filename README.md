@@ -168,7 +168,7 @@ ID | As a          |  I want to be able to | So that I can
     
     
      ### Our Courses
--    This section showcases our Courses and Course Availability.  Our Courses are rendered from the DatesAvailable Model in the Products app.  Course Availability is              maintainable from the Admin section.    
+-    This section showcases our Courses and Course Availability.  Our Course Availability is rendered from the DatesAvailable Model in the Products app.  Course Availability      is maintainable from the Admin section.    
      
       <img src="/static/img/course_lg.png">
       
