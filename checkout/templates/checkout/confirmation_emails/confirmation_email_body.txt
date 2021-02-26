@@ -19,9 +19,6 @@ itinerary & Details{% endif %}
 {% if not item.date_choice %}Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}{% endif %}
 {% endfor %}
 
-
-
-
 We've got your phone number on file as {{ order.phone_number }}.
 
 If you have any questions, feel free to contact us at {{ contact_email }}.
