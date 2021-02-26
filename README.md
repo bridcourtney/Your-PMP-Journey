@@ -99,23 +99,23 @@ ID | As a          |  I want to be able to | So that I can
 # Features
 
 -   ## Navbar
-
-    The navigation bar features the PMP Journey logo in the top left corner.
-
-    For visitors to the site who are not logged in, 'Working Safely Guidance' liks are available for them to use on the Homepage.  Also the following links in the Navbar
-
-       - Home
+-    For Visitors to the site who are not logged in, the following links are available in the Navbar - 
        - Log in
        - Register
-
-    For users who are logged in the Create & View Assessment buttons will be available, the NavBar items are as follows:
-       
-       - Home
-       - Log Out
-       - Profile
+      The navigation bar features the PMP Journey logo in the top left corner and aslo search option for visitors.
      <img src="/static/img/nav_u.png">
-    
-    Python determines if the user is logged in or not by checking if 'user' in session and passes this data to Jinja to display the correct navbar for the user.
+     For Users who are logged in, the following links are available in the Navbar - 
+       - My Profile
+       - Add Testimonial
+       - Log Out
+    <img src="/static/img/nav_login.png">
+    For Super Users who are logged in, the following links are available in the Navbar - 
+       - My Profile
+       - Product Management
+       - Add Testimonial
+       - Log Out
+    <img src="/static/img/nav_super.png">
+ 
 
     The navbar is collapsed into a burger icon on small screens. On the activities page, where the activities filter takes up some of the width of the screen, the navbar is        collapsed on medium screens as well, so that menu items did not start overlapping content.
 
