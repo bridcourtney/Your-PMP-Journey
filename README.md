@@ -143,18 +143,29 @@ ID | As a          |  I want to be able to | So that I can
     
     <img src="/static/img/car_lg.png">
     
--   Hero Carousal on small device :
+-   Hero Carousal on small device:
     
     <img src="/static/img/car_sm.png">
         
      ### Customer Testimonials
--    Persons who purchase any of our courses have the option to add a Testimonial.  Testimonials are maintainable in the Admin section.    
+-    Registered site Users have the option to add a Testimonial.  Our Customer Testimonials are displayed in a carousal.  Testimonials are maintainable in the Admin                section.    
      
-      <img src="/static/img/test_lg.png">
+     <img src="/static/img/test_lg.png">
       
--   Customer Testimonials on small device :
+-   Customer Testimonials on small device:
     
     <img src="/static/img/test_sm.png">
+    
+    Registered User can access the Add Testimonial form from the NavBar.  As registered Users, their User ID is captured from the User Model
+    
+-   Add Testimonials on large device:
+    
+    <img src="/static/img/test_add_lg.png">
+      
+-   Add Testimonials on small device:
+    
+    <img src="/static/img/test_add_sm.png">   
+    
     
      ### Our Courses
 -    This section showcases our Courses and Course Availability.  Course Availability is maintainable from the Admin section.    
@@ -165,6 +176,16 @@ ID | As a          |  I want to be able to | So that I can
     
     <img src="/static/img/course_sm1.png">
     <img src="/static/img/course_sm2.png">
+
+     ### Customer Testimonials
+-    Persons who purchase any of our courses and are registered site Users have the option to add a Testimonial.  Our Customer Testimonials are displayed in a carousal.            Testimonials are maintainable in the Admin section.    
+     
+      <img src="/static/img/test_lg.png">
+      
+-   Customer Testimonials on small device :
+    
+    <img src="/static/img/test_sm.png">
+
 
 -   ## Registration Page
      - The register page allows user's to create a new account. The user is asked to fill the fields "username","firstname","password" and "confirm password". When adding a             username, the code compares it against existing usernames to ensure that it is unique. A username must be 3-15 characters long. 
