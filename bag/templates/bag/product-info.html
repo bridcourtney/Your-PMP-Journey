@@ -2,4 +2,5 @@
 <p class="my-0">{% if item.product.book_type %}<strong>Type: </strong>{{ item.product.book_type |upper }}{% endif %}</p>
 <p class="my-0">{% if item.product.sku %}<strong>SKU: </strong>{{ item.product.sku |upper }}{% endif %}</p>
 <p class="my-0 small">{% if item.product.is_a_service %}Date Booked for: {{ item.c_date |upper }}{% endif %}</p>
+<p>{% if item.product.is_a_service %}No. persons booked for{% else %}{% if item.product.is_a_video %}No. months subscription{% else %}Qty{% endif %}{% endif %}: {{ item.quantity }}</p>
         

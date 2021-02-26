@@ -68,7 +68,7 @@
                             <p class="my-0 small">{% if item.product.is_a_service %}Date Booked for: {{ item.date_choice}}{% endif %}</p>
                         </div>
                          <div class="col-12 col-md-8 text-md-right">
-                            <p class="small mb-0">{% if item.product.is_a_service %}booked for {{ item.quantity }} person{%else%}{{ item.quantity }}{% endif %}  @ €{{ item.product.price }} each</p>
+                            <p class="my-0 small text-muted">{% if item.product.is_a_service %}booked for{% else %}{% if item.product.is_a_video %}months subscription{% else %}Qty{% endif %}{% endif %}: {{ item.quantity }}</p>
                         </div>
                     </div>
                     {% endfor %}
