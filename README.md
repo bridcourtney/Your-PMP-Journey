@@ -54,6 +54,7 @@ ID | As a          |  I want to be able to | So that I can
   ||| **Puchasing and Checkout**
 20| Shopper| Easily select the quantity of a product when purchasing it | Ensure I dont accidently select the wrong product or quantity of product
 21| Shopper| Easily select the number of participants for a Course if applicable | Ensure I dont accidently select the wrong Course or number of participant’s
+21| Shopper| Easily select the number months I want to subscribe to On Demand Videos | Ensure I dont accidently select the wrong number of month's
 22| Shopper| View items in my basket to be purchased | View the total cost of my purchase an all items I will receive
 23| Shopper| Adjust the quantity of products in the basket |Easily make changes to my product selected for purchase before checkout
 24| Shopper| Adjust the no of participants for Course in the basket | easily make changes to my Courses selected for purchase before checkout
