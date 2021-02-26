@@ -14,6 +14,8 @@ https://www.greycampus.com/blog/project-management/top-reasons-for-failing-in-th
 
 gimp - flip
 
+draw io
+
 added bag_tools for subtotal
 
 # 1. User Experience (UX)
@@ -54,6 +56,7 @@ ID | As a          |  I want to be able to | So that I can
   ||| **Puchasing and Checkout**
 20| Shopper| Easily select the quantity of a product when purchasing it | Ensure I dont accidently select the wrong product or quantity of product
 21| Shopper| Easily select the number of participants for a Course if applicable | Ensure I dont accidently select the wrong Course or number of participant’s
+21| Shopper| Easily select the number months I want to subscribe to On Demand Videos | Ensure I dont accidently select the wrong number of month's
 22| Shopper| View items in my basket to be purchased | View the total cost of my purchase an all items I will receive
 23| Shopper| Adjust the quantity of products in the basket |Easily make changes to my product selected for purchase before checkout
 24| Shopper| Adjust the no of participants for Course in the basket | easily make changes to my Courses selected for purchase before checkout
@@ -148,7 +151,7 @@ ID | As a          |  I want to be able to | So that I can
     <img src="/static/img/car_sm.png">
         
      ### Customer Testimonials
--    Registered site Users have the option to add a Testimonial.  Our Customer Testimonials are displayed in a carousal.  Testimonials are maintainable in the Admin                section.    
+-    Registered site Users have the option to add a Testimonial.  Our Customer Testimonials are rendered from the Testimonial app and displayed in a carousal.  Testimonials are maintainable in the Admin                section.    
      
      <img src="/static/img/test_lg.png">
       
@@ -168,7 +171,7 @@ ID | As a          |  I want to be able to | So that I can
     
     
      ### Our Courses
--    This section showcases our Courses and Course Availability.  Course Availability is maintainable from the Admin section.    
+-    This section showcases our Courses and Course Availability.  Our Course Availability is rendered from the DatesAvailable Model in the Products app.  Course Availability      is maintainable from the Admin section.    
      
       <img src="/static/img/course_lg.png">
       
@@ -177,17 +180,46 @@ ID | As a          |  I want to be able to | So that I can
     <img src="/static/img/course_sm1.png">
     <img src="/static/img/course_sm2.png">
 
-     ### Customer Testimonials
--    Persons who purchase any of our courses and are registered site Users have the option to add a Testimonial.  Our Customer Testimonials are displayed in a carousal.            Testimonials are maintainable in the Admin section.    
+    ### Product Reviews
+-    Registered site Users have the option to add a Product Review.  Our Product Reviews are rendered from the ProductReview Model in the Products app and displayed in a           carousal.  Product Reviews are maintainable in the Admin section.  
+
+     <img src="/static/img/review_lg.png">
      
-      <img src="/static/img/test_lg.png">
-      
--   Customer Testimonials on small device :
+-   Product Reviews on small device:
     
-    <img src="/static/img/test_sm.png">
+    <img src="/static/img/review_sm.png">
+   
+-    Our Product rating is the average customer rating for that product, calculated in the Product Model with the following function - 
 
+     <img src="/static/img/rating.png">
+     
+-   Registered User can access the Add Review from the Product Detail page.  As registered Users, their User ID is captured from the User Model.
+    
+-   Add Product Review on large device:
+    
+    <img src="/static/img/review_add_lg.png">
+      
+-   Add Product Review on small device:
+    
+    <img src="/static/img/review_add_sm.png">        
 
--   ## Registration Page
+-    Visitors can view the Products reviews for each product in the Products Details page, but are unable to submit a review.
+
+     <img src="/static/img/review_visitor.png">  
+
+-   ## Contact Us Page
+
+-   The Contact Us page consists of two sections side by side, the Contact Us form and our Contact Details and location on Google Maps.
+
+     <img src="/static/img/contact.png">  
+     
+     - The Contact Us form is accessible to both Visitor and Registered Users.  For Registered Users the Full Name Field and email will be populated automatically from the          Profile model. An email will be sent to the admin of the website with django send_mail() functionality.
+     - The Contact details area provides company's Name & Address, phone number and email, along with a map showing Sligo PMP Training location. When User clicks on the red          marker, company name pops up. Google Map API was used to display locations lat & long.
+     
+-    Once email is submitted successfully, User will get a message to screen - 
+     
+      <img src="/static/img/contact_success.png">  
+
      - The register page allows user's to create a new account. The user is asked to fill the fields "username","firstname","password" and "confirm password". When adding a             username, the code compares it against existing usernames to ensure that it is unique. A username must be 3-15 characters long. 
      - The password field is a required field. The "confirm password" field must match the original password. All passwords are hashed for security purposes. If user's         input does not meet requirements, flash messages will inform a user about the error. When the form is submitted successfully, a user is redirected to the home page and           informed that account was created. There is also a link to the login page for existing users at the bottom of the Registration form.
     
@@ -244,7 +276,7 @@ ID | As a          |  I want to be able to | So that I can
     #### - User Maintenace
     In User Maintenance the Admin person can assign / unassign Manager and Admin privliges. The Admin User can also delete a User.  After clicking the "delete" button, the   delete modal will be triggered. The User will be prompted to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove User from the database
 # Information Architecture
- <img src="/static/img/ERD.PNG">
+ <img src="/static/img/ERD.png">
   <img src="/static/img/ERD_DETAIL.PNG">
 
 # Testing
