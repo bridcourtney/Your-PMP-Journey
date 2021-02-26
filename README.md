@@ -99,17 +99,19 @@ ID | As a          |  I want to be able to | So that I can
 # Features
 
 -   ## Navbar
--    For Visitors to the site who are not logged in, the following links are available in the Navbar - 
+-    For Visitors to the site, the following links are available in the Navbar - 
        - Log in
        - Register
       The navigation bar features the PMP Journey logo in the top left corner and aslo search option for visitors.
      <img src="/static/img/nav_u.png">
-     For Users who are logged in, the following links are available in the Navbar - 
+     
+ -    For Users who are logged in, the following links are available in the Navbar - 
        - My Profile
        - Add Testimonial
        - Log Out
     <img src="/static/img/nav_login.png">
-    For Super Users who are logged in, the following links are available in the Navbar - 
+    
+-    For Super Users who are logged in, the following links are available in the Navbar - 
        - My Profile
        - Product Management
        - Add Testimonial
