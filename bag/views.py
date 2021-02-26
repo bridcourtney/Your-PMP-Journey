@@ -1,14 +1,17 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, \
+    reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 
-from products.models import Product, DatesAvailable
+from products.models import Product
 
 # Create your views here.
 
+
 def view_bag(request):
     """ A view that renders the bag contents page """
-        
+
     return render(request, 'bag/bag.html')
+
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping basket """
@@ -25,17 +28,22 @@ def add_to_bag(request, item_id):
         if item_id in list(bag.keys()):
             if c_date in bag[item_id]['items_by_c_date'].keys():
                 bag[item_id]['items_by_c_date'][c_date] += quantity
-                messages.success(request, f'Updated {product.name} for the {c_date.upper()} to {bag[item_id]["items_by_c_date"][c_date]} person')
-            else: 
+                messages.success(request, f'Updated {product.name} for\
+                    the {c_date.upper()} to\
+                        {bag[item_id]["items_by_c_date"][c_date]} person')
+            else:
                 bag[item_id]['items_by_c_date'][c_date] = quantity
-                messages.success(request, f'Added {product.name} for the {c_date.upper()} to your basket')
+                messages.success(request, f'Added {product.name} for\
+                     the {c_date.upper()} to your basket')
         else:
             bag[item_id] = {'items_by_c_date': {c_date: quantity}}
-            messages.success(request, f'Added {product.name} for {c_date.upper()} to your basket')
+            messages.success(request, f'Added {product.name} for\
+                 {c_date.upper()} to your basket')
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(request, f'Updated {product.name} quantity to\
+                 {bag[item_id]}')
         else:
             bag[item_id] = quantity
             messages.success(request, f'Added {product.name} to your basket')
@@ -57,19 +65,24 @@ def adjust_bag(request, item_id):
     if c_date:
         if quantity > 0:
             bag[item_id]['items_by_c_date'][c_date] = quantity
-            messages.success(request, f'Updated {product.name} for {c_date.upper()} to {bag[item_id]["items_by_c_date"][c_date]} person')
+            messages.success(request, f'Updated {product.name} for\
+                 {c_date.upper()} to\
+                      {bag[item_id]["items_by_c_date"][c_date]} person')
         else:
             del bag[item_id]['items_by_c_date'][c_date]
             if not bag[item_id]['items_by_c_date']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} for the {c_date.upper()}  from your basket')
+            messages.success(request, f'Removed {product.name} for the\
+                 {c_date.upper()}  from your basket')
     else:
         if quantity > 0:
             bag[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(request, f'Updated {product.name} quantity to\
+                 {bag[item_id]}')
         else:
             bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your basket')
+            messages.success(request, f'Removed\
+                 {product.name} from your basket')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -89,10 +102,12 @@ def remove_from_bag(request, item_id):
             del bag[item_id]['items_by_c_date'][c_date]
             if not bag[item_id]['items_by_c_date']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} for {c_date.upper()}  from your basket')
+            messages.success(request, f'Removed {product.name} for\
+                 {c_date.upper()}  from your basket')
         else:
             bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
+            messages.success(request, f'Removed\
+                 {product.name} from your bag')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)

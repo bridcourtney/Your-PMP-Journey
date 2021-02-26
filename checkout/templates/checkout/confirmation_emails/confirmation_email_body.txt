@@ -17,6 +17,11 @@ itinerary & Details{% endif %}
 {{ item |length }}
 {% endfor %}
 
+{% for item in order.lineitems.all %}
+{{ item |length }}
+{% if not item.date_choice %}shipped{% endif %}
+{{ item |length }}
+{% endfor %}
 
 
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
