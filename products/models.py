@@ -1,11 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
-  
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -39,7 +40,6 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
-
     def __str__(self):
         return self.name
 
@@ -49,10 +49,9 @@ class Product(models.Model):
         """
         self.total = sum(int(review['stars']) for review in self.reviews.values())
         if self.total > 0:
-            return round(self.total / self.reviews.count(),1)
+            return round(self.total / self.reviews.count(), 1)
         else:
             return self.total
-
 
 
 class ProductReview(models.Model):

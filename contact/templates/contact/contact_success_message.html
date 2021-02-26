@@ -10,14 +10,16 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-            <div class="row d-flex align-items-center justify-content-center h-100 ">
-                <div class="col-12 text-center mt-5 mb-5">
-                    <h1 class="uppercase">Thank you!</h1>
-                    <div class="text-center mt-3 mb-3"></div>
-                    <p>Your message has been sent successfully.</p>
-                            <p>We will get back to you soon!</p>
-                    <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0">Back home</a>
+<div class="overlay"></div>
+<div class="container-top contact-background ">
+            <div class="row d-flex align-items-center justify-content-center contact_success_message">
+                <div class="col-md-12 text-center mt-5 mb-1">
+                    <h1 class="uppercase">Thank you for Contacting Us</h1>
+                    <div class="text-center mt-3 mb-3">
+                    <h3><strong>Your message has been sent successfully.</strong></h3>
+                            <h5><strong>We value your Question and will be in touch shortly</strong></h5>
+                    </div>
+                            <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0">Back home</a>
                 </div>
             </div>
 </div>

@@ -220,7 +220,6 @@ width: 100%;
 /* Footer */
 
 footer {
-    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -256,13 +255,30 @@ footer {
 }
 
 /* About page */
-.about-img{
-    height:200px;
-    width: 100px;
-     
-}
+
+
 
 /*Contact page*/
+
+.contact_success_message{
+     border-radius: 8px;
+    padding-top: 1%;
+    top: 30%;
+    left:20%;
+    right:20%;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.3);
+    color: white;
+    height:50%;
+}
+
+.contact-background {
+  background-image: url('/media/allAuthBG1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+min-height:40rem;
+  height: 60vh;
+}
 
 #map {
     min-height:18rem;
@@ -459,3 +475,14 @@ background-color: #343a40;
    
 }
 }
+/*Media query for small devices (360px and up)*/
+@media (min-width: 360px) {
+
+
+/* Specific Media query for small devices from 501px to 768px width*/
+@media (min-width: 501px) and (max-width: 768px){
+
+}
+/* Specific Media query for small devices from 530px to 768px width*/
+@media (min-width: 530px) and (max-width: 768px){
+
