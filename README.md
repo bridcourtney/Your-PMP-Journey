@@ -128,8 +128,14 @@ ID | As a          |  I want to be able to | So that I can
  
 -   ## Footer
 
-    The footer is grey a differenct colour to the Navbar, is very simple with only Copyright text and also a useful feature of displaying the name of the user logged in
+-   The footer consists of useful links for Visitors & Users
 
+     <img src="/static/img/footer_lg.png">
+     
+-   The footer is responsive on small devices
+
+     <img src="/static/img/footer_sm.png">
+     
 -   ## Home Page 
 
     ### Hero Image
