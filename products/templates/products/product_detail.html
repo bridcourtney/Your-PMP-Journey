@@ -74,11 +74,38 @@
             </div>
         </div>
     </div>
-    <hr>
-    
-<div class="row">
-    <div class="col-6">
-        
+    <hr>    
+<div class="row">      
+     <div class="col-md-6">
+         {% if request.user.is_authenticated %}
+                <div class="card-header">
+                    Add a Reviews
+                </div>
+                <div class="card-body">
+                    <form class="form" method="POST" action="">
+                        {% csrf_token %}
+                        <p class="font-weight-bold">Select Stars:</p>
+                        <div class="input-group">
+                            <select class="form-control rounded-0 w-50" name="stars" id='stars'>          
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3" selected>3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>                           
+                            </select>
+                        </div>
+                        <p class="font-weight-bold pt-1">Enter your review:</p>
+                        <div class="input-group">
+                           <textarea name="content" rows="5" cols="40" placeholder="Enter comment" class="textarea form-control" required></textarea>
+                        </div>
+                         <button class="btn btn-black rounded-0 text-uppercase mt-5">Submit</button>
+                    </form>
+                </div>                                               
+                {% else %}
+                <p>Please sign in to add review</p>
+            {% endif %}
+        </div>
+    <div class="col-md-6">        
          <h2 class="subtitle">Reviews</h2>
             {% for review in product.reviews.all %}
             <div class="card p-2">
@@ -92,55 +119,8 @@
                     No Reviews Yet
             {% endfor %}           
         </div>
-       
+    </div>
 
-     <div class="col-6">
-         {% if request.user.is_authenticated %}
-            <div class="card">
-                <div class="card-header">
-                    Add a Reviews
-                </div>
-                <div class="card-body">
-                    <p class="card-text"><form method="POST" action="" class="form mb-2">
-                    {% csrf_token %}
-                    <div class="field">
-                        <label>Stars</label>
-                        <div class="control">
-                            <div class="select">
-                                <select name="stars" id="">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3" selected>3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>Content</label>
-                        <div class="control">
-                            <textarea name="content"></textarea>
-                        </div>
-                    </div>
-                   
-                                <button class="btn btn-black rounded-0 text-uppercase mt-5">Submit</button>
-    
-                </p>
-                   
-                </div>
-            </div>
-       
-            
-                
-                {% else %}
-                <p>Please sign in to add review</p>
-            {% endif %}
-        </div>
-    </div>
-   
-    </div>
-</div>
    
             
         
