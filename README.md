@@ -155,6 +155,16 @@ ID | As a          |  I want to be able to | So that I can
 -   Customer Testimonials on small device :
     
     <img src="/static/img/test_sm.png">
+    
+     ### Our Courses
+-    This section showcases our Courses and Course Availability.  Course Availability is maintainable from the Admin section.    
+     
+      <img src="/static/img/course_lg.png">
+      
+-   Our Courses on small device :
+    
+    <img src="/static/img/course_sm1.png">
+    <img src="/static/img/course_sm2.png">
 
 -   ## Registration Page
      - The register page allows user's to create a new account. The user is asked to fill the fields "username","firstname","password" and "confirm password". When adding a             username, the code compares it against existing usernames to ensure that it is unique. A username must be 3-15 characters long. 
