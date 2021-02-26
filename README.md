@@ -211,10 +211,12 @@ ID | As a          |  I want to be able to | So that I can
 
      <img src="/static/img/contact.png">  
      
-     1. The Contact Us form is accessible to both Visitor and Registered Users.  For Registered Users the Full Name Field will be 
-
-Contact form that's offered to fill out (name, email, message) if a user has any questions or queries. The real email will be sent to the admin of the website (handling by django send_mail() functionality). If an authenticated user opens the contact page, the full name (if provided in user's profile) and email fields are pre-populated.
-Contact details section provides company's address, phone number and email, along with a map showing the location of the tea club. By clicking at the red marker, a user can check the opening hours. Google Map API was used to accomplish that.
+     - The Contact Us form is accessible to both Visitor and Registered Users.  For Registered Users the Full Name Field and email will be populated automatically from the          Profile model. An email will be sent to the admin of the website with django send_mail() functionality.
+     - The Contact details area provides company's Name & Address, phone number and email, along with a map showing Sligo PMP Training location. When User clicks on the red          marker, company name pops up. Google Map API was used to display locations lat & long.
+     
+-    Once email is submitted successfully, User will get a message to screen - 
+     
+      <img src="/static/img/contact_success.png">  
 
      - The register page allows user's to create a new account. The user is asked to fill the fields "username","firstname","password" and "confirm password". When adding a             username, the code compares it against existing usernames to ensure that it is unique. A username must be 3-15 characters long. 
      - The password field is a required field. The "confirm password" field must match the original password. All passwords are hashed for security purposes. If user's         input does not meet requirements, flash messages will inform a user about the error. When the form is submitted successfully, a user is redirected to the home page and           informed that account was created. There is also a link to the login page for existing users at the bottom of the Registration form.
