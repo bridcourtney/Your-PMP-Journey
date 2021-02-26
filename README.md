@@ -138,11 +138,23 @@ ID | As a          |  I want to be able to | So that I can
      
 -   ## Home Page 
 
-    ### Hero Image
-    The Hero image of a professional woman standing at her PC.  The womans desk is an good example of good ergonomics.  The applicaiton title and sub-heading accoss the hero         image is important for User knowledge & Guidance.  Once User is signed in the Create & View Asssesments buttons are available
+    ### Hero Carousal
+-  The Hero images consist of one lady running to suggest a journey like the PMP trail.  The other image is a lady studying happily.  There is a 'View Our Products' button.
     
-     ### Working Safely Guidance Cards
-    Each Working Safely Guidance card on the home page gives the user brief and useful information about each of the listings displayed. The 'read more' button brings the         User to a Modal Form with more detail on the topic
+    <img src="/static/img/car_lg.png">
+    
+-   Hero Carousal on small device :
+    
+    <img src="/static/img/car_sm.png">
+        
+     ### Customer Testimonials
+-    Persons who purchase any of our courses have the option to add a Testimonial.  Testimonials are maintainable in the Admin section.    
+     
+      <img src="/static/img/test_lg.png">
+      
+-   Customer Testimonials on small device :
+    
+    <img src="/static/img/test_sm.png">
 
 -   ## Registration Page
      - The register page allows user's to create a new account. The user is asked to fill the fields "username","firstname","password" and "confirm password". When adding a             username, the code compares it against existing usernames to ensure that it is unique. A username must be 3-15 characters long. 
