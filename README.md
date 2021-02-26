@@ -110,7 +110,7 @@ ID | As a          |  I want to be able to | So that I can
        - Add Testimonial
        - Log Out
        
-    <img src="/static/img/nav_login.png">
+      <img src="/static/img/nav_login.png">
     
 -    For Super Users, the following links are available in the Navbar - 
        - My Profile
@@ -118,7 +118,7 @@ ID | As a          |  I want to be able to | So that I can
        - Add Testimonial
        - Log Out
        
-    <img src="/static/img/nav_super.png">
+     <img src="/static/img/nav_super.png">
  
 
  -   The navbar is collapsed into a burger icon on small screens
