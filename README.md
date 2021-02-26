@@ -177,14 +177,28 @@ ID | As a          |  I want to be able to | So that I can
     <img src="/static/img/course_sm1.png">
     <img src="/static/img/course_sm2.png">
 
-     ### Customer Testimonials
--    Persons who purchase any of our courses and are registered site Users have the option to add a Testimonial.  Our Customer Testimonials are displayed in a carousal.            Testimonials are maintainable in the Admin section.    
+    ### Product Reviews
+-    Registered site Users have the option to add a Product Review.  Our Product Reviews are displayed in a carousal.  Product Reviews are maintainable in the Admin                section.  
+
+     <img src="/static/img/review_lg.png">
      
-      <img src="/static/img/test_lg.png">
-      
--   Customer Testimonials on small device :
+-   Product Reviews on small device:
     
-    <img src="/static/img/test_sm.png">
+    <img src="/static/img/review_sm.png">
+   
+-    Our Product rating is the average customer rating for that product, calculated in the Product Model with the following function - 
+
+     <img src="/static/img/rating.png">
+     
+-   Registered User can access the Add Review from the Product Detail page.  As registered Users, their User ID is captured from the User Model
+    
+-   Add Testimonials on large device:
+    
+    <img src="/static/img/test_add_lg.png">
+      
+-   Add Testimonials on small device:
+    
+    <img src="/static/img/test_add_sm.png">        
 
 
 -   ## Registration Page
