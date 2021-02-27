@@ -305,11 +305,29 @@ ID | As a          |  I want to be able to | So that I can
 ## Profile Page
    The Profile page is only available to authenticated users.
 
-   The Profile page contains Personal info section (username and email displayed).  The Shipping details section allows the User to save the shipping information, so for the    next purchase the fields in the checkout form will be pre-filled with this information. User can update their Profile Information.
+   The Profile page contains the Users Default Delivery Information.  User can update their Profile Information.
    
    The Users Order History is also available and each Order contains a link that will redirect the User to the Order History page.
    
    <img src="/static/img/profile.png">
+   
+## Product Management
+
+The Product Management feature is available only to Superusers. The Product Management page allows SuperUsers to add new products, edit products & delete products.  If the form is valid, the product is added to the database and the user is redirected to the newly created product details page.
+
+## Django-allauth features
+
+### Sign Up
+The sign up page allows a user to create a new account. The user is asked to fill the fields "email", "username", "password" and "password (again)".  When the form is submitted, a verification email is sent to the user's email to verify the email and complete the Sign Up process.  There is also a link to the login page for existing users at the bottom of the form.
+
+<img src="/static/img/signup.png">
+
+### Sign In
+In The Sign In form User must populate "username" and "password" fields. If the login was successful, a user is redirected to the home page and the toast success message appears confirming a successful Sign In.
+There is a link to the sign up page for new users at the bottom of the form.  There is also a link to the forgot password functionality.
+
+<img src="/static/img/signin.png">
+
    
     ### Edit Assessments 
 
