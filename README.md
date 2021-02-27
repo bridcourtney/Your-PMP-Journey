@@ -1,4 +1,4 @@
-
+<img src="/static/img/intro.png">
 
 The Journey to accopplishing  the PMP (pROJECT Management Professional) accreditation is not easy.  It reuiquires hours of study and thats after you complete the 35 hour course.  This website  is a guide to persons on the pmp trial.  It provides study resources and of course the first step, the 35 hour course.
 
