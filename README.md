@@ -288,8 +288,16 @@ ID | As a          |  I want to be able to | So that I can
       
    <img src="/static/img/basket_checkout_success.png">
      
+  ## Order Confirmation Email 
+  
+  The Order Confirmation Email has been configured to display the Course details.  
 
-
+  <img src="/static/img/order_mail.png">
+  
+  If the order has only Course bookings then the shipping details will not be included in the email.
+  
+  <img src="/static/img/order_mail_course.png">
+  
 -   ## View Assessments
 
     Clicking on the "View Assessments" button on the Homepage brings the User to page where they can view all their completed assessments
