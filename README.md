@@ -229,39 +229,44 @@ ID | As a          |  I want to be able to | So that I can
   
   -   ## Products Page
      
-   The "All products" page displays each Product card.  The Product card contains the following Product information - Image, Category, Name, Customer Rating, Price & Type.     When User clicks on the Product image they are redirected to the Product Details page.
+   The "All products" page displays each Product card.  The Product card contains the following Product information - Image, Category, Name, Customer Rating, Price & Type.      The User can see at the top right of the page how many Products are available.  In the top left of the page the User can sort the Products by - Price, Name, Category &        Author.  When User clicks on the Product image they are redirected to the Product Details page.
      
    <img src="/static/img/products.png">  
      
   -   ## Products Details
      
-  The Product Details page contains the following Product information - Details, Image, Category, Name, Customer Rating, Price & Type. In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
+  The Product Details page contains the following Product information - Details, Image, Category, Name, Customer Rating, Price & Type.  In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
      
-   <img src="/static/img/products_detail.png">      
+   <img src="/static/img/products_detail.png">
+ 
+ If the Category of the Product selected is'On Demand Video', then this means the price is a monthly subscription
+ 
+ <img src="/static/img/products_video.png">
      
   -   ## Courses Page
      
-   The "All Courses" page displays each Course card.  The Course card contains the following Course information - Image, Name & Description.  When User clicks on the Course image they are redirected to the Course Details page.
+   The "All Courses" page displays each Course card.  The Course card contains the following Course information - Image, Name & Description.  The User can see at the top right of the page how many Courses are available.In the top left of the page the User can sort the Courses by - Price, Name & Author.  When User clicks on the Course image they are redirected to the Course Details page.
      
    <img src="/static/img/courses.png">  
      
   -   ## Course Details
      
-  The Course Details page contains the following Course information - Details, Image, Category, Name, Customer Rating, Price & Type. In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
+  The Course Details page contains the following Course information - Details, Image, Name & Price.  On the Course Detail page the User will select from the Dates Available dropdown the date they would like to start the course.  The Dates Available for each course is rendered to the Product Details page from the Dates Available model in the Product App.  The User will also enter the number of persons they are booking the course for.
      
-   <img src="/static/img/products_detail.png">      
-      
-   
-   
-   
-   Once the User clicks 'Add to Basket', they will be prompted with success message that item has been added to basket
+   <img src="/static/img/courses_detail.png">      
+        
+   Once the User clicks 'Add to Basket', they will be prompted with success confirmation message that Course has been added to basket with the Date Booked for and the number    of participants
      
-   <img src="/static/img/products_basket.png">   
+   <img src="/static/img/courses_basket.png">   
      
-    Clicking on the "logout" button by the logged in users ends their session and redirects to the Login page.
     
--   ## Create Assessments
+-   ## Shopping Basket
+     The Users shopping basket will contain all items.  If the item is a product it will detail the Name, Type & Quantity.  If the item has a Product Category of 'On Demand        Video' then the number months subscription selected will be visible.  If the item is a Course, the Start Date selected will be visible along with the number of                participants selected.
 
+     <img src="/static/img/basket_total.png">  
+     
+     
+     
     Clicking on the "Create Assessments" button on the Homepage allows the User to create a new VDU Assessment
 
 -   ## View Assessments
