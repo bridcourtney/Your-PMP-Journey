@@ -237,7 +237,11 @@ ID | As a          |  I want to be able to | So that I can
      
   The Product Details page contains the following Product information - Details, Image, Category, Name, Customer Rating, Price & Type. In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
      
-   <img src="/static/img/products_detail.png">      
+   <img src="/static/img/products_detail.png">
+ 
+ If the Category of the Product selected is'On Demand Video', then this means the price is a monthly subscription
+ 
+ <img src="/static/img/products_video.png">
      
   -   ## Courses Page
      
