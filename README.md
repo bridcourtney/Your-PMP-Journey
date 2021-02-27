@@ -302,6 +302,15 @@ ID | As a          |  I want to be able to | So that I can
 
     Clicking on the "View Assessments" button on the Homepage brings the User to page where they can view all their completed assessments
     
+## Profile Page
+   The Profile page is only available to authenticated users.
+
+   The Profile page contains Personal info section (username and email displayed).  The Shipping details section allows the User to save the shipping information, so for the    next purchase the fields in the checkout form will be pre-filled with this information. User can update their Profile Information.
+   
+   The Users Order History is also available and each Order contains a link that will redirect the User to the Order History page.
+   
+   <img src="/static/img/profile.png">
+   
     ### Edit Assessments 
 
     Fron the View Assessment page the User can Edit their existing assessments.  Assessments are only visible to person created by.  The Assessment form will be pre-populated     with the original Assessment details. After clicking "Edit Assessment" button, the Assessment is updated in the database and a user is redirected to their Assessments         Page.
