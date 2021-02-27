@@ -71,15 +71,16 @@ ID | As a          |  I want to be able to | So that I can
 -   ## Design Choices
   
       -   ### Colour Scheme
-        - The orange NavBar is eye catching and and the orange test in the footer pulls the two elements together.  
-        - There is alot of whitespace in the Product and Course pages, Basket and Checkout Page.  The whitespace draws attention and attracts the user to 
+        - The orange NavBar is eye catching and and the orange text in the footer pulls the two elements together.  
+        - There is alot of whitespace in the Product and Course, Basket and Checkout Pages.  The whitespace draws attention and attracts the user to 
            the eyecatching buttons and good quality images
     
       -   ### Imagery 
          - I selected images that are relevant to the content of the application.  
       
       
-      -   ### Icons 
+      -   ### Font & Icons 
+        -  Font Josefin Sans   
         -  The icon in the navbar is a good fit for the theme of the application
         -  Icons break up the information visually, creating space for the user and not overwhelming them with too much info at once.
         -  Each icon was chosen for it's clarity in quickly explaining the relevant meaning with an image.
