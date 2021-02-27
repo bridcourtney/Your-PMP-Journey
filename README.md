@@ -468,48 +468,81 @@ All python files were tested through PEP8 Online validator.  I was able to corre
 
 ## Local Deployment
 
-1. Running Code Locally Follow this link to my Repository on Github and open it.
-
-Click Clone or Download.
-
-In the Clone with HTTPs section, click the copy icon.
-
-In your local IDE open Git Bash.
-
-Change the current working directory to where you want the cloned directory to be made.
-
-Type git clone, and then paste the URL you copied earlier.
-
-Press enter and your local clone will be ready.
-
-Create and start a new environment:
+1. Running Code Locally Follow this [link](https://github.com/bridcourtney/Your_PMP_Journey) to my Repository on Github and open it.
+2. Click Clone or Download.
+3. In the Clone with HTTPs section, click the copy icon.
+4. In your local IDE open Git Bash.
+5. Change the current working directory to where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied earlier.
+7. Press enter and your local clone will be ready.
+8. Create and start a new environment:
 python -m .venv venv
 source env/bin/activate
-
-Install the project dependencies:
+9. Install the project dependencies:
 pip install -r requirements.txt
-
-Create a new file, called env.py and add your environment variables:
-
+10. Create a new file, called env.py and add your environment variables:
 import os
 os.environ.setdefault("STRIPE_PUBLISHABLE", "secret key here") os.environ.setdefault("STRIPE_SECRET", "secret key here") os.environ.setdefault("DATABASE_URL", "secret key here") os.environ.setdefault("SECRET_KEY", "secret key here") os.environ.setdefault("AWS_ACCESS_KEY_ID", "secret key here") os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "secret key here")
-
-Go to settings.py file and add your environment variables.
-
-Add env.py to .gitignore file
-
-Go to terminal and run the following: python3 manage.py makemigrations, then python3 manage.py migrate to migrate all existing migrations to postgres database.
-
-Create a superuser: python3 manage.py createsuperuser
-
-Run it with the following command:
+11. Go to settings.py file and add your environment variables.
+12. Add env.py to .gitignore file
+13. Go to terminal and run the following: python3 manage.py makemigrations, then python3 manage.py migrate to migrate all existing migrations to postgres database.
+14. Create a superuser: python3 manage.py createsuperuser
+15. Run it with the following command:
 python manage.py runserver
+16. Open localhost:8000 on your browser
+17. Add /admin to the end of the url address and login with your superuser account and create new products.
 
-Open localhost:8000 on your browser
+## Deployment to Heroku
+The following steps are required to deploy this site to Heroku:
 
-Add /admin to the end of the url address and login with your superuser account and create new products.
+1. Create a new app in Heroku with a unique name, chose your region
+2. Go to Resources, within Add-ons searched Heroku Postgres, choose Hobby Dev - Free version, then click Provision button.
+3. In Settings click on Reveal Config Vars button, and copy the value of DATABASE_URL
+4. Return to terminal window and run sudo pip3 install dj_database_url
+5. Run sudo pip3 install psycopg2. Create a requirements.txt file using the terminal command pip3 freeze > requirements.txt
+6. Go to settings.py and add import dj_database_url and updated DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))} also update env.py with os.environ.setdefault("DATABASE_URL", "postgres://postgres key - copied earlier from Heroku")
+7. Run python3 manage.py makemigrations, then python3 manage.py migrate to migrate all existing migrations to postgres database.
+8. Create a superuser: python3 manage.py createsuperuser
+9. Log into Amazon AWS, Go to S3 and create a new S3 bucket.
+10. Return to terminal window and run sudo pip3 install django-storages and sudo pip3 install boto3.
+11. In settings.py add storages to INSTALLED_APPS.
+12. In settings.py add the following lines:
 
+AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    # Bucket Configuration
+    AWS_STORAGE_BUCKET_NAME = 'pmp-journey'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
+13. Update env.py with AWS keys (these keys are from S3).
+14. Create custom_storages.py at the top level:
+
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+class StaticStorage(S3Boto3Storage):
+   location = settings.STATICFILES_LOCATION
+
+class MediaStorage(S3Boto3Storage):
+   location = settings.MEDIAFILES_LOCATION
+
+15. Go to settings.py and add:
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+
+16. Return to terminal window and run python3 manage.py collectstatic
+
+17. Return to Heroku. In Settings click on Reveal Config Vars button, and add the following config vars from env.py:   
+    
+    
 ## Branching
   I used branching in this project.  I found it very useful at stages when I was embarking on new functionaility and not sure how it was going to turn out, it was reassuring   to know I had a choice whether to merge with the master or not.
   I soon realised each time I created a branch from Github, the following installs were required - 
