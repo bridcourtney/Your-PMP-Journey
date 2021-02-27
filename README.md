@@ -261,7 +261,7 @@ ID | As a          |  I want to be able to | So that I can
      
     
 -   ## Shopping Basket
-     The Users shopping basket will contain all items.  If the item is a product it will detail the Name, Type & Quantity.  If the item has a Product Category of 'On Demand        Video' then the number months subscription added will be visible.  If the item is a Course the Start Date selected will be visible along with the number of participants      selected
+     The Users shopping basket will contain all items.  If the item is a product it will detail the Name, Type & Quantity.  If the item has a Product Category of 'On Demand        Video' then the number months subscription selected will be visible.  If the item is a Course, the Start Date selected will be visible along with the number of                participants selected.
 
      <img src="/static/img/basket.png">  
      
