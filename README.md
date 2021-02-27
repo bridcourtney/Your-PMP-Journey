@@ -297,11 +297,7 @@ ID | As a          |  I want to be able to | So that I can
   If the order has only Course bookings then the shipping details will not be included in the email.
   
   <img src="/static/img/order_mail_course.png">
-  
--   ## View Assessments
-
-    Clicking on the "View Assessments" button on the Homepage brings the User to page where they can view all their completed assessments
-    
+      
 ## Profile Page
    The Profile page is only available to authenticated users.
 
@@ -334,44 +330,12 @@ The website contains the following basis  404 and 500 pages  Each page contains 
 
 <img src="/static/img/404.png">
 <img src="/static/img/500.png">
-   
-    ### Edit Assessments 
 
-    Fron the View Assessment page the User can Edit their existing assessments.  Assessments are only visible to person created by.  The Assessment form will be pre-populated     with the original Assessment details. After clicking "Edit Assessment" button, the Assessment is updated in the database and a user is redirected to their Assessments         Page.
-     There is also a Cancel button that redirects the User to the their Assessmments page
+## Features Left to Implement
 
-    ### Delete Assessment
+I would like to allow User to Edit / Delete their Reviews and Testimonial.  At the moment this is only possible from the Django Admin Area.  I would also like to render the Users testimonial & Reviews to their User Profile page
 
-    The delete Assessment function allows only the created by person to delete Assessment. After a user clicks the "delete" button, the delete modal will be triggered. The       User will be prompted to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove Assessment from the database
-
-- ## User Profile Page
-     When the User selects Profile Option in the Navbar, they can view their profile.  The profile page consists of the persons firstname & Username Displayed.  Depending on      the Users level of access they following three options may be available -
-     
-   ### Change Password
-
-    This button will be available to all users.  A user can change their current password by filling the form that contains following fields:  "New password", "Confirm New       password". Both new password need to match. There is a question mark that displays requirements for the field when hovered over. If the form is successfully submitted, a      user is redirected back to Profile Page with a flash message detailing successfully changed password. There is also a button "Cancel" that redirects User to Profile Page
  
-   ### Your Reports Assessment
-
-    This button will only be available users that have been assigned the Manager role.  In the 'View Reports Assessment' page managers can view their reports Assessments.         Only the Assessments that the User is assigned as Manager in the database will be displayed, by limiting the find to Manager in Python.  The Manager also has the option       to search by Username, displaying all assessments created by particular username
-
-
-  ### Maintenance
-
-    This button will only be available users that have been assigned the Admin role.  This button has a dropdown of three options - 
-    
-    - Manager Maintenace
-    - Department Maintenace
-    - User Maintenace
-    
-    #### - Manager Maintenace
-    In Manager Maintenance the Admin person is responsible for the updating of the list of Managers available in dropdown to the User creating VDU Assessment. The Admin can        Edit the Records.  The Admin User can also delete a Manager.  After clicking the "delete" button, the delete modal will be triggered. The User will be      prompted to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove Manager from the database
-    
-    #### - Department Maintenace
-    In Department Maintenance the Admin person is responsible for the updating of the list of Department available in dropdown to the User creating VDU Assessment. The Admin       can Edit the Records.  The Admin User can also delete a Department.  After clicking the "delete" button, the delete modal will be triggered. The User will be prompted        to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove Department from the database
-    
-    #### - User Maintenace
-    In User Maintenance the Admin person can assign / unassign Manager and Admin privliges. The Admin User can also delete a User.  After clicking the "delete" button, the   delete modal will be triggered. The User will be prompted to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove User from the database
 # Information Architecture
  <img src="/static/img/ERD.png">
   <img src="/static/img/ERD_DETAIL.PNG">
