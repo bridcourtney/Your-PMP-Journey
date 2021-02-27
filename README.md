@@ -229,7 +229,7 @@ ID | As a          |  I want to be able to | So that I can
   
   -   ## Products Page
      
-   The "All products" page displays each Product card.  The Product card contains the following Product information - Image, Category, Name, Customer Rating, Price & Type.     When User clicks on the Product image they are redirected to the Product Details page.
+   The "All products" page displays each Product card.  The Product card contains the following Product information - Image, Category, Name, Customer Rating, Price & Type.      The User can see at the top right of the page how many Products are available.  In the top left of the page the User can sort the Products by - Price, Name, Category &        Author.  When User clicks on the Product image they are redirected to the Product Details page.
      
    <img src="/static/img/products.png">  
      
@@ -245,15 +245,15 @@ ID | As a          |  I want to be able to | So that I can
      
   -   ## Courses Page
      
-   The "All Courses" page displays each Course card.  The Course card contains the following Course information - Image, Name & Description.  When User clicks on the Course image they are redirected to the Course Details page.
+   The "All Courses" page displays each Course card.  The Course card contains the following Course information - Image, Name & Description.  The User can see at the top right of the page how many Courses are available.In the top left of the page the User can sort the Courses by - Price, Name & Author.  When User clicks on the Course image they are redirected to the Course Details page.
      
    <img src="/static/img/courses.png">  
      
   -   ## Course Details
      
-  The Course Details page contains the following Course information - Details, Image, Category, Name, Customer Rating, Price & Type. In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
+  The Course Details page contains the following Course information - Details, Image, Name & Price. On the Course Detail page the User will select from the Dates Available dropdown the date they would like to start the course.  The Dates Available for each course is rendered to the Product Details page from the Dates Available model in the Product App.  The User will also enter the number of persons they are booking the course for.
      
-   <img src="/static/img/products_detail.png">      
+   <img src="/static/img/courses_detail.png">      
       
    
    
