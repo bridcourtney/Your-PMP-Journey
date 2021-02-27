@@ -1,16 +1,18 @@
+<h1 align="center">Your PMP Journey</h1>
+
 <img src="/static/img/intro.png">
 
+<h2 align="center">Introduction</h2>
 
+Sligo PMI Training is an approved provider of project management training by the Project Management Institute (PMI). As a PMI Authorized Training Partner (ATP), our training courses have been reviewed against PMI's Quality Assurance guidelines.
 
-PMP certification can also be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one
+For Sligo PMI Training to gain accreditation for its educational programmes, accreditation bodies carefully evaluate and verify that Sligo PMI Training meets and exceeds their rigorous quality criteria for course content, qualified instructors, instructional design, verified learning outcomes and maintenance of the highest standards of professional and ethical business practices.
+
+PMP certification can be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one.
 
 The fail rate for the PMP exam is actually quite high at an estimated 40-50% for first-time test-takers. There is no specific number of questions that must be answered correctly in order to pass the PMP exam.  This is high and can be a costly journey.  
 
 Anyone who aspires to attain PMP certification should be prepared for the exam. Consequently, first-time test takers should also be advised that the PMP certification exam is extremely difficult. The exam consists of 200 multiple-choice questions in a period of only four hours.
-
-PMP certification can also be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one
-
-https://www.greycampus.com/blog/project-management/top-reasons-for-failing-in-the-pmp-exam
 
 gimp - flip
 
@@ -75,13 +77,12 @@ ID | As a          |  I want to be able to | So that I can
 -   ## Design Choices
   
       -   ### Colour Scheme
-        - There is alot of whitespace in the application, the whitespace draws attention and attracts the user to 
+        - The orange NavBar is eye catching and and the orange test in the footer pulls the two elements together.  
+        - There is alot of whitespace in the Product and Course pages, Basket and Checkout Page.  The whitespace draws attention and attracts the user to 
            the eyecatching buttons and good quality images
     
       -   ### Imagery 
-         - I selected images that are relevant to the content of the application.   The icon in the navbar has an orange seat, 
-            and the buttons on the home page are orange.  This small detail improves the asthetics of the application
-        
+         - I selected images that are relevant to the content of the application.  
       
       
       -   ### Icons 
@@ -337,7 +338,17 @@ I would like to allow User to Edit / Delete their Reviews and Testimonial.  At t
 
  
 # Information Architecture
+The website contains the following apps -  About, Bag, Checkout, Contact, Home, Products, Profiles & Testimonials
+
+The Products App contains the following Models - Product, Category, ProductReview & DatesAvailable
+The Checkout App contains the following Models - Order & OrderLineItem
+
+The following is the websites ERD (Entity Relationship Diagram) - 
+
  <img src="/static/img/ERD.png">
+ 
+ The following is description of the websites Model Relationships - 
+ 
   <img src="/static/img/ERD_DETAIL.PNG">
 
 # Testing
