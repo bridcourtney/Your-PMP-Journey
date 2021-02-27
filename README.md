@@ -227,7 +227,9 @@ ID | As a          |  I want to be able to | So that I can
       <img src="/static/img/about.png">  
 
   
-  -   ## Logout.
+  -   ## Products Page
+
+      <img src="/static/img/products.png">  
 
     Clicking on the "logout" button by the logged in users ends their session and redirects to the Login page.
     
