@@ -235,7 +235,7 @@ ID | As a          |  I want to be able to | So that I can
      
   -   ## Products Details
      
-  The Product Details page contains the following Product information - Details, Image, Category, Name, Customer Rating, Price & Type. In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
+  The Product Details page contains the following Product information - Details, Image, Category, Name, Customer Rating, Price & Type.  In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
      
    <img src="/static/img/products_detail.png">
  
@@ -251,16 +251,13 @@ ID | As a          |  I want to be able to | So that I can
      
   -   ## Course Details
      
-  The Course Details page contains the following Course information - Details, Image, Name & Price. On the Course Detail page the User will select from the Dates Available dropdown the date they would like to start the course.  The Dates Available for each course is rendered to the Product Details page from the Dates Available model in the Product App.  The User will also enter the number of persons they are booking the course for.
+  The Course Details page contains the following Course information - Details, Image, Name & Price.  On the Course Detail page the User will select from the Dates Available dropdown the date they would like to start the course.  The Dates Available for each course is rendered to the Product Details page from the Dates Available model in the Product App.  The User will also enter the number of persons they are booking the course for.
      
    <img src="/static/img/courses_detail.png">      
-      
-   
-   
-   
-   Once the User clicks 'Add to Basket', they will be prompted with success message that item has been added to basket
+        
+   Once the User clicks 'Add to Basket', they will be prompted with success confirmation message that Course has been added to basket with the Date Booked for and the number    of participants
      
-   <img src="/static/img/products_basket.png">   
+   <img src="/static/img/courses_basket.png">   
      
     Clicking on the "logout" button by the logged in users ends their session and redirects to the Login page.
     
