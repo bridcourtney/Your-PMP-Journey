@@ -94,11 +94,9 @@ ID | As a          |  I want to be able to | So that I can
     
     Wireframes were built in the early stages of development to get a rough outline of the structure needed for the planned features of the site. The wireframes were created     using Balsamiq. These can be viewed below:
 
-    -   Desktop & Tablet - [View](Wireframes/HomePage.pdf)
-    -   Mobile - [View](Wireframes/Profile_Page.JPG)
-     -  User Assessment Report Wireframe - [View](Wireframes/Assessment_Report.JPG)
-    
-    
+    -   Desktop & Tablet - [View](data/wireframes/desktop_tablet.pdf)
+    -   Mobile - [View](data/wireframes/mobile.pdf)
+         
 # Features
 
 -   ## Navbar
