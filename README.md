@@ -268,11 +268,9 @@ ID | As a          |  I want to be able to | So that I can
      
 -   ## Checkout
 
-      The Checkout page contains 2 section: The Customer Details & the Order Summary.  
-     
-     <img src="/static/img/basket_checkout.png">
-     
-     ### Order Summary
+      The Checkout page contains 2 section: The Customer Details & the Order Summary. 
+      
+       ### Order Summary
      In the Order Summary, if the item is a product it will detail the Name, Type & Quantity.  If the item has a Product Category of 'On Demand Video' then the number months      subscription selected will be visible.  If the item is a Course, the Start Date selected will be visible along with the number of participants selected.
      The Order Summary also contains the Total Cost, Delivery Cost & the grand Total.
     
@@ -281,10 +279,11 @@ ID | As a          |  I want to be able to | So that I can
      The User is informed how much the card will be charged in the paragraph below the Proceed to payment button.
      For Testing purposes, card number 4242 4242 4242 4242 is used for successful stripe payment. The user must provide card number, expiration date (any date in                  future) and CVC (any numbers).  A webhook is used to make sure that the order is processed even in the cases when the payment process is interrupted (e.g. if a user          accidentally closes the page or browser after clicking "Proceed to payment" button).
      
-     
+     <img src="/static/img/basket_checkout.png">
+       
   ## Checkout Success
   
-   Once the form is submitted and the payment is successfully proceeded, the Checkout sucesss page is loaded and a confirmation email is sent to the user's email. Also, a       toast message appears to ensure the user that the order was processed successfully.
+   Once the form is submitted and the payment is successfully proceeded, the Checkout success page is loaded and a confirmation email is sent to the user's email.  A           toast message appears to inform the user that the order was processed successfully.
       
    <img src="/static/img/basket_checkout_success.png">
      
