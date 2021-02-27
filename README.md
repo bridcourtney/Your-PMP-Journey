@@ -313,7 +313,7 @@ ID | As a          |  I want to be able to | So that I can
    
 ## Product Management
 
-The Product Management feature is available only to Superusers. The Product Management page allows SuperUsers to add new products, edit products & delete products.  If the form is valid, the product is added to the database and the user is redirected to the newly created product details page.
+The Product Management feature is available only to Superusers. The application allows SuperUsers to add new products, edit products & delete products.  If the form is valid, the product is added to the database and the user is redirected to the newly created product details page.  
 
 ## Django-allauth features
 
@@ -328,6 +328,12 @@ There is a link to the sign up page for new users at the bottom of the form.  Th
 
 <img src="/static/img/signin.png">
 
+## 404 and 500 error pages
+The website contains the following basis  404 and 500 pages  Each page contains a heading, information about the error and a "Home" and a "Contact Us" button. 
+
+
+<img src="/static/img/404.png">
+<img src="/static/img/500.png">
    
     ### Edit Assessments 
 
