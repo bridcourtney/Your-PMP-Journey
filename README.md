@@ -277,7 +277,8 @@ ID | As a          |  I want to be able to | So that I can
     ### Customer Details
      If a user already has a profile with the shipping information saved, the form will be pre-populated with this information.
      The User is informed how much the card will be charged in the paragraph below the Proceed to payment button.
-     For Testing purposes, card number 4242 4242 4242 4242 is used for successful stripe payment. The user must provide card number, expiration date (any date in                  future) and CVC (any numbers).  A webhook is used to make sure that the order is processed even in the cases when the payment process is interrupted (e.g. if a user          accidentally closes the page or browser after clicking "Proceed to payment" button).
+     The user must provide card number, expiration date and CVC.  For Testing purposes, card number 4242 4242 4242 4242 is used for successful stripe payment.
+     A webhook is used to make sure that the order is processed even in the cases when the payment process is interrupted (e.g. if a user accidentally closes the page or          browser after clicking "Proceed to payment" button).
      
      <img src="/static/img/basket_checkout.png">
        
