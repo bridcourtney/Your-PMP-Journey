@@ -221,10 +221,13 @@ ID | As a          |  I want to be able to | So that I can
      - The register page allows user's to create a new account. The user is asked to fill the fields "username","firstname","password" and "confirm password". When adding a             username, the code compares it against existing usernames to ensure that it is unique. A username must be 3-15 characters long. 
      - The password field is a required field. The "confirm password" field must match the original password. All passwords are hashed for security purposes. If user's         input does not meet requirements, flash messages will inform a user about the error. When the form is submitted successfully, a user is redirected to the home page and           informed that account was created. There is also a link to the login page for existing users at the bottom of the Registration form.
     
--   ## Login Page
-     - The login page contains the form with "username" and "password" fields, allowing registered users to log into their account. If the entered username and hashed       password          match the ones in the database, a user is redirected to the home page and informed that the login was successful. Otherwise, flash messages will be displayed about              incorrect user's input. There is also a link to the register page for new users at the bottom of the form.
+-   ## About Us Page
+      The User learns in the About page that Sligo PMI Training is an approved provider of project management training by the Project Management Institute (PMI), as a person      who wishes to complete the PMP Training been an approved provider is a must.
+      
+      <img src="/static/img/about.png">  
 
--   ## Logout
+  
+  -   ## Logout.
 
     Clicking on the "logout" button by the logged in users ends their session and redirects to the Login page.
     
