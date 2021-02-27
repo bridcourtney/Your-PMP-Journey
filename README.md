@@ -228,9 +228,21 @@ ID | As a          |  I want to be able to | So that I can
 
   
   -   ## Products Page
-
-      <img src="/static/img/products.png">  
-
+     
+     The "All products" page displays each product card.  The Product card contains the following Product information - Image, Category, Name, Customer Rating, Price & Type.      When User clicks on the Product image they are redirected to the Product Details.
+     
+   <img src="/static/img/products.png">  
+     
+  -   ## Products Details
+     
+     The Product Details page contains the following Product information - Details, Image, Category, Name, Customer Rating, Price & Type. In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
+     
+   <img src="/static/img/products_detail.png">      
+     
+     Once the User clicks 'Add to Basket', they will be prompted with success message that item has been added to basket
+     
+   <img src="/static/img/products_basket.png">   
+     
     Clicking on the "logout" button by the logged in users ends their session and redirects to the Login page.
     
 -   ## Create Assessments
