@@ -1,22 +1,18 @@
+<h1 align="center">Your PMP Journey</h1>
 
+<img src="/static/img/intro.png">
 
-The Journey to accopplishing  the PMP (pROJECT Management Professional) accreditation is not easy.  It reuiquires hours of study and thats after you complete the 35 hour course.  This website  is a guide to persons on the pmp trial.  It provides study resources and of course the first step, the 35 hour course.
+<h2 align="center">Introduction</h2>
 
-PMP certification can also be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one
+Sligo PMI Training is an approved provider of project management training by the Project Management Institute (PMI). As a PMI Authorized Training Partner (ATP), our training courses have been reviewed against PMI's Quality Assurance guidelines.
+
+For Sligo PMI Training to gain accreditation for its educational programmes, accreditation bodies carefully evaluate and verify that Sligo PMI Training meets and exceeds their rigorous quality criteria for course content, qualified instructors, instructional design, verified learning outcomes and maintenance of the highest standards of professional and ethical business practices.
+
+PMP certification can be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one.
 
 The fail rate for the PMP exam is actually quite high at an estimated 40-50% for first-time test-takers. There is no specific number of questions that must be answered correctly in order to pass the PMP exam.  This is high and can be a costly journey.  
 
 Anyone who aspires to attain PMP certification should be prepared for the exam. Consequently, first-time test takers should also be advised that the PMP certification exam is extremely difficult. The exam consists of 200 multiple-choice questions in a period of only four hours.
-
-PMP certification can also be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one
-
-https://www.greycampus.com/blog/project-management/top-reasons-for-failing-in-the-pmp-exam
-
-gimp - flip
-
-draw io
-
-added bag_tools for subtotal
 
 # 1. User Experience (UX)
 
@@ -75,13 +71,12 @@ ID | As a          |  I want to be able to | So that I can
 -   ## Design Choices
   
       -   ### Colour Scheme
-        - There is alot of whitespace in the application, the whitespace draws attention and attracts the user to 
+        - The orange NavBar is eye catching and and the orange test in the footer pulls the two elements together.  
+        - There is alot of whitespace in the Product and Course pages, Basket and Checkout Page.  The whitespace draws attention and attracts the user to 
            the eyecatching buttons and good quality images
     
       -   ### Imagery 
-         - I selected images that are relevant to the content of the application.   The icon in the navbar has an orange seat, 
-            and the buttons on the home page are orange.  This small detail improves the asthetics of the application
-        
+         - I selected images that are relevant to the content of the application.  
       
       
       -   ### Icons 
@@ -261,58 +256,144 @@ ID | As a          |  I want to be able to | So that I can
      
     
 -   ## Shopping Basket
+
      The Users shopping basket will contain all items.  If the item is a product it will detail the Name, Type & Quantity.  If the item has a Product Category of 'On Demand        Video' then the number months subscription selected will be visible.  If the item is a Course, the Start Date selected will be visible along with the number of                participants selected.
 
      <img src="/static/img/basket_total.png">  
      
-     
-     
-    Clicking on the "Create Assessments" button on the Homepage allows the User to create a new VDU Assessment
+-   ## Checkout
 
--   ## View Assessments
-
-    Clicking on the "View Assessments" button on the Homepage brings the User to page where they can view all their completed assessments
+      The Checkout page contains 2 section: The Customer Details & the Order Summary. 
+      
+       ### Order Summary
+     In the Order Summary, if the item is a product it will detail the Name, Type & Quantity.  If the item has a Product Category of 'On Demand Video' then the number months      subscription selected will be visible.  If the item is a Course, the Start Date selected will be visible along with the number of participants selected.
+     The Order Summary also contains the Total Cost, Delivery Cost & the grand Total.
     
-    ### Edit Assessments 
-
-    Fron the View Assessment page the User can Edit their existing assessments.  Assessments are only visible to person created by.  The Assessment form will be pre-populated     with the original Assessment details. After clicking "Edit Assessment" button, the Assessment is updated in the database and a user is redirected to their Assessments         Page.
-     There is also a Cancel button that redirects the User to the their Assessmments page
-
-    ### Delete Assessment
-
-    The delete Assessment function allows only the created by person to delete Assessment. After a user clicks the "delete" button, the delete modal will be triggered. The       User will be prompted to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove Assessment from the database
-
-- ## User Profile Page
-     When the User selects Profile Option in the Navbar, they can view their profile.  The profile page consists of the persons firstname & Username Displayed.  Depending on      the Users level of access they following three options may be available -
+    ### Customer Details
+     If a user already has a profile with the shipping information saved, the form will be pre-populated with this information.
+     The User is informed how much the card will be charged in the paragraph below the Proceed to payment button.
+     The user must provide card number, expiration date and CVC.  For Testing purposes, card number 4242 4242 4242 4242 is used for successful stripe payment.
+     A webhook is used to make sure that the order is processed even in the cases when the payment process is interrupted (e.g. if a user accidentally closes the page or          browser after clicking "Proceed to payment" button).
      
-   ### Change Password
+     <img src="/static/img/basket_checkout.png">
+       
+  ## Checkout Success
+  
+   Once the form is submitted and the payment is successfully proceeded, the Checkout success page is loaded and a confirmation email is sent to the user's email.  A           toast message appears to inform the user that the order was processed successfully.
+      
+   <img src="/static/img/basket_checkout_success.png">
+     
+  ## Order Confirmation Email 
+  
+  The Order Confirmation Email has been configured to display the Course details.  
 
-    This button will be available to all users.  A user can change their current password by filling the form that contains following fields:  "New password", "Confirm New       password". Both new password need to match. There is a question mark that displays requirements for the field when hovered over. If the form is successfully submitted, a      user is redirected back to Profile Page with a flash message detailing successfully changed password. There is also a button "Cancel" that redirects User to Profile Page
+  <img src="/static/img/order_mail.png">
+  
+  If the order has only Course bookings then the shipping details will not be included in the email.
+  
+  <img src="/static/img/order_mail_course.png">
+      
+## Profile Page
+   The Profile page is only available to authenticated users.
+
+   The Profile page contains the Users Default Delivery Information.  User can update their Profile Information.
+   
+   The Users Order History is also available and each Order contains a link that will redirect the User to the Order History page.
+   
+   <img src="/static/img/profile.png">
+   
+## Product Management
+
+The Product Management feature is available only to Superusers. The application allows SuperUsers to add new products, edit products & delete products.  If the form is valid, the product is added to the database and the user is redirected to the newly created product details page.  
+
+## Django-allauth features
+
+### Sign Up
+The sign up page allows a user to create a new account. The user is asked to fill the fields "email", "username", "password" and "password (again)".  When the form is submitted, a verification email is sent to the user's email to verify the email and complete the Sign Up process.  There is also a link to the login page for existing users at the bottom of the form.
+
+<img src="/static/img/signup.png">
+
+### Sign In
+In The Sign In form User must populate "username" and "password" fields. If the login was successful, a user is redirected to the home page and the toast success message appears confirming a successful Sign In.
+There is a link to the sign up page for new users at the bottom of the form.  There is also a link to the forgot password functionality.
+
+<img src="/static/img/signin.png">
+
+## 404 and 500 error pages
+The website contains the following basis  404 and 500 pages  Each page contains a heading, information about the error and a "Home" and a "Contact Us" button. 
+
+
+<img src="/static/img/404.png">
+<img src="/static/img/500.png">
+
+## Features Left to Implement
+
+I would like to allow User to Edit / Delete their Reviews and Testimonial.  At the moment this is only possible from the Django Admin Area.  I would also like to render the Users testimonial & Reviews to their User Profile page
+
  
-   ### Your Reports Assessment
-
-    This button will only be available users that have been assigned the Manager role.  In the 'View Reports Assessment' page managers can view their reports Assessments.         Only the Assessments that the User is assigned as Manager in the database will be displayed, by limiting the find to Manager in Python.  The Manager also has the option       to search by Username, displaying all assessments created by particular username
-
-
-  ### Maintenance
-
-    This button will only be available users that have been assigned the Admin role.  This button has a dropdown of three options - 
-    
-    - Manager Maintenace
-    - Department Maintenace
-    - User Maintenace
-    
-    #### - Manager Maintenace
-    In Manager Maintenance the Admin person is responsible for the updating of the list of Managers available in dropdown to the User creating VDU Assessment. The Admin can        Edit the Records.  The Admin User can also delete a Manager.  After clicking the "delete" button, the delete modal will be triggered. The User will be      prompted to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove Manager from the database
-    
-    #### - Department Maintenace
-    In Department Maintenance the Admin person is responsible for the updating of the list of Department available in dropdown to the User creating VDU Assessment. The Admin       can Edit the Records.  The Admin User can also delete a Department.  After clicking the "delete" button, the delete modal will be triggered. The User will be prompted        to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove Department from the database
-    
-    #### - User Maintenace
-    In User Maintenance the Admin person can assign / unassign Manager and Admin privliges. The Admin User can also delete a User.  After clicking the "delete" button, the   delete modal will be triggered. The User will be prompted to Confirm the deletion, there is an option to cancel the deletion or click Yes to permantly remove User from the database
 # Information Architecture
+## Database choice
+
+During the development phase I worked with sqlite3 database which is installed with Django.  For deployment(production), a PostgreSQL database is provided by Heroku as an add-on.
+
+## Data Modelling
+The User model is provided by Django as a part of defaults django.contrib.auth.models.
+
+The following apps were created for this website -  About, Bag, Checkout, Contact, Home, Products, Profiles & Testimonials.
+
+- The Products App contains the following Models - Product, Category, ProductReview & DatesAvailable.
+- The Checkout App contains the following Models - Order & OrderLineItem
+
+The following is the websites ERD (Entity Relationship Diagram) - 
+
  <img src="/static/img/ERD.png">
+ 
+ The following is description of the websites Model Relationships - 
+ 
   <img src="/static/img/ERD_DETAIL.PNG">
+
+# Technologies Used
+
+## Languages
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://www.javascript.com/)
+-   [Python](https://www.python.org/)
+-   [Jinja](https://jinja.palletsprojects.com/en/2.10.x/)
+
+## Libraries & Frameworks
+- [Django](https://www.djangoproject.com/) - Python framework for building the project.
+- [Bootstrap](https://www.bootstrapcdn.com/) - The front-end framework for layout and design.
+- [Google Fonts](https://fonts.google.com/) - To import fonts.
+- [FontAwesome](https://fontawesome.com/) - Provide icons used across the project.
+- [Gunicorn](https://pypi.org/project/gunicorn/) - A Python WSGI HTTP Server to enable deployment to Heroku.
+- [Psycopg2](https://pypi.org/project/psycopg2/) - Enable the PostgreSQL database to function with Django.
+- [Stripe](https://stripe.com/ie) - Handle financial transactions.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Style Django forms.
+- [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview)- Render the map in Contact page.
+
+## Tools
+- [GitPod](https://www.gitpod.io/) - Online IDE for developing this project.
+- [Git](https://git-scm.com/) - Version control.
+- [GitHub](https://github.com/) - Remotely storing project's code.
+- [PIP](https://pip.pypa.io/en/stable/installing/) - Installation of necessary tools.
+- [Pillow](https://python-pillow.org/) - Saving image file formats
+- [Heroku](https://dashboard.heroku.com/apps) - Host the project.
+- [AWS S3 Bucket](https://aws.amazon.com/) - Store static and media files in prodcution.
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Compatibility with AWS.
+- [GIMP](https://www.gimp.org/) - Flipping, Editing & Resizing images.
+- [Balsamiq](https://balsamiq.com/) - Create wireframes.
+- [Draw.io](https://app.diagrams.net/) - Create ERD Diagram.
+- [Am I responsive](http://ami.responsivedesign.is/) - Testing & Displaying responsivness.
+- [PEP 8 Online Validator](http://pep8online.com/)- Check Python code.
+- [W3C Validator](https://validator.w3.org/)- Check the validity HTML and CSS.
+- [Online JavaScript Beautifier](https://beautifier.io/)- Beautift HTML and JavaScript.
+- [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/)- Generate MarkDown TOC.
+
+## Databases
+- [SQlite3](https://www.sqlite.org/index.html) - a development database.
+- [PostgreSQL](https://www.postgresql.org/) - a production database.
+
 
 # Testing
 
@@ -347,72 +428,118 @@ All python files were tested through PEP8 Online validator.  I was able to corre
  I used the Google Chrome's developer tools to see how it looks across all the different device screen sizes to ensure compatibility and responsiveness.
  I also used Am I Responsive online tool for checking responsiveness on different devices.
  
-# Technology Used
- - GitPod - an online IDE for developing this project.
- - Git - for version control.
- - GitHub - for remotely storing project's code.
- - PIP - for installation of necessary tools.
- - GIMP2 - for editing VDU logo.
- - Am I Responsive - for creation of the images in the readme file and checking responsiveness.
- - Flickr - to host Workstation images
-
- ## Front-End
- - HTML - to build the foundation of the project.
- - CSS - to create custom styles.
-
-## Back-End
- - Python 3.8.2 - back-end programming language used in this project.
- - Flask 1.1.2 - microframework for building and rendering pages.
- - MongoDB Atlas - NoSQL database for storing back-end data.
- - PyMongo - for Python to get access the MongoDB database.
- - WTForms 2.2.1 - for creating forms with validation.
- - Werkzeug 0.16.1 - to generate and verify password hashing.
- - Jinja 2.10.1 - templating language for Python, to display back-end data in HTML.
- - Heroku - to host the project.
-
-
-### Languages Used
-
--   [HTML5](https://en.wikipedia.org/wiki/HTML5)
--   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [JavaScript](https://www.javascript.com/)
--   [jQuery](https://jqueryui.com)
-
-## Libraries
-- Materialize 1.0.0 - main responsive modern front-end framework used for grid and responsivesness.
-- Google Fonts - to import fonts.
-- FontAwesome - to provide icons used across the project.
-
 # Deployment
 
 ## Local Deployment
 
-To run this project, the following tools need to be installed:
- - An IDE (I used GitPod online IDE for creating this project)
- - MongoDB Atlas (for creation your database)
- - Git
- - PIP
- - Python
+1. Running Code Locally Follow this [link](https://github.com/bridcourtney/Your_PMP_Journey) to my Repository on Github and open it.
+2. Click Clone or Download.
+3. In the Clone with HTTPs section, click the copy icon.
+4. In your local IDE open Git Bash.
+5. Change the current working directory to where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied earlier.
+7. Press enter and your local clone will be ready.
+8. Create and start a new environment:
+python -m .venv venv
+source env/bin/activate
+9. Install the project dependencies:
+pip install -r requirements.txt
+10. Create a new file, called env.py and add your environment variables:
+import os
+os.environ.setdefault("STRIPE_PUBLISHABLE", "secret key here") os.environ.setdefault("STRIPE_SECRET", "secret key here") os.environ.setdefault("DATABASE_URL", "secret key here") os.environ.setdefault("SECRET_KEY", "secret key here") os.environ.setdefault("AWS_ACCESS_KEY_ID", "secret key here") os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "secret key here")
+11. Go to settings.py file and add your environment variables.
+12. Add env.py to .gitignore file
+13. Go to terminal and run the following: python3 manage.py makemigrations, then python3 manage.py migrate to migrate all existing migrations to postgres database.
+14. Create a superuser: python3 manage.py createsuperuser
+15. Run it with the following command:
+python manage.py runserver
+16. Open localhost:8000 on your browser
+17. Add /admin to the end of the url address and login with your superuser account and create new products.
 
-### Directions
+## Deployment to Heroku
+The following steps are required to deploy this site to Heroku:
 
- - 1.You can clone this repository directly into the editor of your choice by pasting the following command into the terminal:
-    git clone https://github.com/bridcourtney/VDU-Assessment.  Alternatively, you can save a copy of this repository by clicking the green button "Clone or download" , then      "Download Zip" button, and after extract the Zip file to your folder.
-    
- - 2.In the terminal window change directory (CD) to the correct file location (directory that you have just created).
- 
- - 3.Set up environment variables: ◦Create .env file in the root directory.  On the top of the file add import os to set the environment variables in the operating system.
-    Set the connection to your MongoDB database(MONGO_URI) and a SECRET_KEY with the following syntax: os.environ["SECRET_KEY"] = "YourSecretKey" os.environ["MONGO_URI"] =       "YourMongoURI"
-    
- - 4.Install all requirements from the requirements.txt file putting this command into your terminal: pip3 install -r requirements.txt
-    Note: GitPod does not require sudo, so if you use another IDE, you will need to include sudo in the beginning of the command: sudo pip3 install -r requirements.txt.
-    
- - 5.Create a new Database called "vdu_check" in MongoDB Atlas.  You can sign up for free account, if you do not have one.
- 
- - 6.In "vdu_check" database create the 4 collections below.  Once the collections are created you can run the application using the following command python3 run.py.
+1. Create a new app in Heroku with a unique name, chose your region
+2. Go to Resources, within Add-ons searched Heroku Postgres, choose Hobby Dev - Free version, then click Provision button.
+3. In Settings click on Reveal Config Vars button, and copy the value of DATABASE_URL
+4. Return to terminal window and run sudo pip3 install dj_database_url
+5. Run sudo pip3 install psycopg2. Create a requirements.txt file using the terminal command pip3 freeze > requirements.txt
+6. Go to settings.py and add import dj_database_url and updated DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))} also update env.py with os.environ.setdefault("DATABASE_URL", "postgres://postgres key - copied earlier from Heroku")
+7. Run python3 manage.py makemigrations, then python3 manage.py migrate to migrate all existing migrations to postgres database.
+8. Create a superuser: python3 manage.py createsuperuser
+9. Log into Amazon AWS, Go to S3 and create a new S3 bucket.
+10. Return to terminal window and run sudo pip3 install django-storages and sudo pip3 install boto3.
+11. In settings.py add storages to INSTALLED_APPS.
+12. In settings.py add the following lines:
 
-<h2 align="center"><img src="static/images/db_Collections.JPG"></h2>
+AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    # Bucket Configuration
+    AWS_STORAGE_BUCKET_NAME = 'pmp-journey'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
+13. Update env.py with AWS keys (these keys are from S3).
+14. Create custom_storages.py at the top level:
+15. From django.conf import settings
+16. From storages.backends.s3boto3 import S3Boto3Storage
+
+class StaticStorage(S3Boto3Storage):
+   location = settings.STATICFILES_LOCATION
+
+class MediaStorage(S3Boto3Storage):
+   location = settings.MEDIAFILES_LOCATION
+
+17. Go to settings.py and add:
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+
+18. Return to terminal window and run python3 manage.py collectstatic
+19. Return to Heroku. In Settings click on Reveal Config Vars button, and add the following config vars from env.py:   
+
+Key           | Vavue         | 
+------------  | ------------- |
+ AWS_ACCESS_KEY_ID |secret key here | 
+ AWS_SECRET_ACCESS_KEY |secret key here | 
+ DATABASE_URL |secret key here |
+ USE_AWS |1| 
+ SECRET_KEY |secret key here| 
+ STRIPE_PUBLIC_KEY |secret key here|
+ STRIPE_SECRET_KEY |secret key here|
+ STRIPE_WH_SECRET |secret key here|
+ EMAIL_HOST_PASS |secret key here|
+ GOOGLE_MAP_API_KEY |secret key here|
+ EMAIL_HOST_USER |host.@mail.com|
+
+20. Click to Deploy, then GitHub, search for repository and click to connect button.
+21. Return to terminal window and run sudo pip3 install gunicorn and add to requirements.txt
+22. Create a Procfile using the following command: echo web: gunicorn ms4.wsgi:application
+22. Run git add ., git commit -m "my commit message" and git push commands to push all changes to GitHub repository.
+23. Return to Heroku and hit Deploy Branch
+24. Once the build is complete, click on Open app
+25. Go to settings.py and add pmp-journey.herokuapp.com to ALLOWED_HOSTS
+26. Run git add ., git commit -m "my commit message" and git push commands to push all changes to GitHub repository.
+27. Returned to Heroku and hit Deploy Branch again.
+
+### Hosting media files with AWS
+The static files and media files (that will be uploaded by superuser - product/service images) are hosted in the AWS S3 Bucket. To host them, you need to create an account in AWS and create your S3 basket with public access.
+
+### Sending email via Gmail
+In order to send real emails from the application, you need to connect it to your Gmail account, setting up your email address in EMAIL_HOST_USER variable and your app password generated by your email provider in EMAIL_HOST_PASS variable.
+
+### Google Maps API key set up
+In the Google Cloud Platform Console create a new project.
+Click Continue to enable the API and any related services.
+Get an API key and set the API key restrictions on the Credentials page. 
+Add your Google Maps key into the environment variable locally in the env.py file:
+os.environ["GOOGLE_MAP_KEY"] = "<Your Google Map key>" and in production in the Heroku Config Vars as GOOGLE_MAP_KEY.
 
 ## Branching
   I used branching in this project.  I found it very useful at stages when I was embarking on new functionaility and not sure how it was going to turn out, it was reassuring   to know I had a choice whether to merge with the master or not.
