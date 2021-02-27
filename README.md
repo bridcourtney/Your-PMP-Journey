@@ -366,7 +366,7 @@ The following is the websites ERD (Entity Relationship Diagram) -
 - [Bootstrap](https://www.bootstrapcdn.com/) - The front-end framework for layout and design.
 - [Google Fonts](https://fonts.google.com/) - To import fonts.
 - [FontAwesome](https://fontawesome.com/) - Provide icons used across the project.
-- {Gunicorn}(https://pypi.org/project/gunicorn/) - A Python WSGI HTTP Server to enable deployment to Heroku.
+- [Gunicorn](https://pypi.org/project/gunicorn/) - A Python WSGI HTTP Server to enable deployment to Heroku.
 - [Psycopg2](https://pypi.org/project/psycopg2/) - Enable the PostgreSQL database to function with Django.
 - [Stripe](https://stripe.com/ie) - Handle financial transactions.
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Style Django forms.
@@ -522,8 +522,8 @@ AWS_S3_OBJECT_PARAMETERS = {
 13. Update env.py with AWS keys (these keys are from S3).
 14. Create custom_storages.py at the top level:
 
-from django.conf import settings
-from storages.backends.s3boto3 import S3Boto3Storage
+15. From django.conf import settings
+16. From storages.backends.s3boto3 import S3Boto3Storage
 
 class StaticStorage(S3Boto3Storage):
    location = settings.STATICFILES_LOCATION
@@ -531,17 +531,21 @@ class StaticStorage(S3Boto3Storage):
 class MediaStorage(S3Boto3Storage):
    location = settings.MEDIAFILES_LOCATION
 
-15. Go to settings.py and add:
+17. Go to settings.py and add:
 STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
-16. Return to terminal window and run python3 manage.py collectstatic
+18. Return to terminal window and run python3 manage.py collectstatic
 
-17. Return to Heroku. In Settings click on Reveal Config Vars button, and add the following config vars from env.py:   
-    
+19. Return to Heroku. In Settings click on Reveal Config Vars button, and add the following config vars from env.py:   
+
+Key           | Vavue         | 
+------------  | ------------- |
+ AWS_ACCESS_KEY_ID |secret key here | 
+
     
 ## Branching
   I used branching in this project.  I found it very useful at stages when I was embarking on new functionaility and not sure how it was going to turn out, it was reassuring   to know I had a choice whether to merge with the master or not.
