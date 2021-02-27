@@ -14,12 +14,6 @@ The fail rate for the PMP exam is actually quite high at an estimated 40-50% for
 
 Anyone who aspires to attain PMP certification should be prepared for the exam. Consequently, first-time test takers should also be advised that the PMP certification exam is extremely difficult. The exam consists of 200 multiple-choice questions in a period of only four hours.
 
-gimp - flip
-
-draw io
-
-added bag_tools for subtotal
-
 # 1. User Experience (UX)
 
 -   ## Project Goals
@@ -360,7 +354,7 @@ The following is the websites ERD (Entity Relationship Diagram) -
 
 # Technologies Used
 
-## Languages Used
+## Languages
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JavaScript](https://www.javascript.com/)
@@ -369,41 +363,36 @@ The following is the websites ERD (Entity Relationship Diagram) -
 
 ## Libraries & Frameworks
 - [Django](https://www.djangoproject.com/) - Python framework for building the project.
-- [Bootstrap]() - as the front-end framework for layout and design.
-- [Google Fonts]() - to import fonts.
-- [FontAwesome]() - to provide icons used across the project.
-- [JQuery]() - to simplify DOM manipulation and to initialize Bootstrap functions.
-- {Gunicorn}() - a Python WSGI HTTP Server to enable deployment to Heroku.
-- [Psycopg2]() - to enable the PostgreSQL database to function with Django.
-- [Stripe]() - to handle financial transactions.
-- [Django]() Crispy Forms - to style Django forms.
-- [Google Maps JavaScript API]()- to render the map in Contact page.
+- [Bootstrap](https://www.bootstrapcdn.com/) - The front-end framework for layout and design.
+- [Google Fonts](https://fonts.google.com/) - To import fonts.
+- [FontAwesome](https://fontawesome.com/) - Provide icons used across the project.
+- {Gunicorn}(https://pypi.org/project/gunicorn/) - A Python WSGI HTTP Server to enable deployment to Heroku.
+- [Psycopg2](https://pypi.org/project/psycopg2/) - Enable the PostgreSQL database to function with Django.
+- [Stripe](https://stripe.com/ie) - Handle financial transactions.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Style Django forms.
+- [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview)- Render the map in Contact page.
 
-## Technology Used
- - GitPod - an online IDE for developing this project.
- - Git - for version control.
- - GitHub - for remotely storing project's code.
- - PIP - for installation of necessary tools.
- - GIMP2 - for editing VDU logo.
- - Am I Responsive - for creation of the images in the readme file and checking responsiveness.
- - Flickr - to host Workstation images
+## Tools
+- [GitPod](https://www.gitpod.io/) - Online IDE for developing this project.
+- [Git](https://git-scm.com/) - Version control.
+- [GitHub](https://github.com/) - Remotely storing project's code.
+- [PIP](https://pip.pypa.io/en/stable/installing/) - Installation of necessary tools.
+- [Pillow](https://python-pillow.org/) - Saving image file formats
+- [Heroku](https://dashboard.heroku.com/apps) - Host the project.
+- [AWS S3 Bucket](https://aws.amazon.com/) - Store static and media files in prodcution.
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Compatibility with AWS.
+- [GIMP](https://www.gimp.org/) - Flipping, Editing & Resizing images.
+- [Balsamiq](https://balsamiq.com/) - Create wireframes.
+- [Draw.io](https://app.diagrams.net/) - Create ERD Diagram.
+- [Am I responsive](http://ami.responsivedesign.is/) - Testing & Displaying responsivness.
+- [PEP 8 Online Validator](http://pep8online.com/)- Check Python code.
+- [W3C Validator](https://validator.w3.org/)- Check the validity HTML and CSS.
+- [Online JavaScript Beautifier](https://beautifier.io/)- Beautift HTML and JavaScript.
+- [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/)- Generate MarkDown TOC.
 
- ## Front-End
- - HTML - to build the foundation of the project.
- - CSS - to create custom styles.
-
-## Back-End
- - Python 3.8.2 - back-end programming language used in this project.
- - Flask 1.1.2 - microframework for building and rendering pages.
- - MongoDB Atlas - NoSQL database for storing back-end data.
- - PyMongo - for Python to get access the MongoDB database.
- - WTForms 2.2.1 - for creating forms with validation.
- - Werkzeug 0.16.1 - to generate and verify password hashing.
- - Jinja 2.10.1 - templating language for Python, to display back-end data in HTML.
- - Heroku - to host the project.
-
-
-
+## Databases
+- [SQlite3](https://www.sqlite.org/index.html) - a development database.
+- [PostgreSQL](https://www.postgresql.org/) - a production database.
 
 
 # Testing
@@ -479,31 +468,46 @@ All python files were tested through PEP8 Online validator.  I was able to corre
 
 ## Local Deployment
 
-To run this project, the following tools need to be installed:
- - An IDE (I used GitPod online IDE for creating this project)
- - MongoDB Atlas (for creation your database)
- - Git
- - PIP
- - Python
+1. Running Code Locally Follow this link to my Repository on Github and open it.
 
-### Directions
+Click Clone or Download.
 
- - 1.You can clone this repository directly into the editor of your choice by pasting the following command into the terminal:
-    git clone https://github.com/bridcourtney/VDU-Assessment.  Alternatively, you can save a copy of this repository by clicking the green button "Clone or download" , then      "Download Zip" button, and after extract the Zip file to your folder.
-    
- - 2.In the terminal window change directory (CD) to the correct file location (directory that you have just created).
- 
- - 3.Set up environment variables: ◦Create .env file in the root directory.  On the top of the file add import os to set the environment variables in the operating system.
-    Set the connection to your MongoDB database(MONGO_URI) and a SECRET_KEY with the following syntax: os.environ["SECRET_KEY"] = "YourSecretKey" os.environ["MONGO_URI"] =       "YourMongoURI"
-    
- - 4.Install all requirements from the requirements.txt file putting this command into your terminal: pip3 install -r requirements.txt
-    Note: GitPod does not require sudo, so if you use another IDE, you will need to include sudo in the beginning of the command: sudo pip3 install -r requirements.txt.
-    
- - 5.Create a new Database called "vdu_check" in MongoDB Atlas.  You can sign up for free account, if you do not have one.
- 
- - 6.In "vdu_check" database create the 4 collections below.  Once the collections are created you can run the application using the following command python3 run.py.
+In the Clone with HTTPs section, click the copy icon.
 
-<h2 align="center"><img src="static/images/db_Collections.JPG"></h2>
+In your local IDE open Git Bash.
+
+Change the current working directory to where you want the cloned directory to be made.
+
+Type git clone, and then paste the URL you copied earlier.
+
+Press enter and your local clone will be ready.
+
+Create and start a new environment:
+python -m .venv venv
+source env/bin/activate
+
+Install the project dependencies:
+pip install -r requirements.txt
+
+Create a new file, called env.py and add your environment variables:
+
+import os
+os.environ.setdefault("STRIPE_PUBLISHABLE", "secret key here") os.environ.setdefault("STRIPE_SECRET", "secret key here") os.environ.setdefault("DATABASE_URL", "secret key here") os.environ.setdefault("SECRET_KEY", "secret key here") os.environ.setdefault("AWS_ACCESS_KEY_ID", "secret key here") os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "secret key here")
+
+Go to settings.py file and add your environment variables.
+
+Add env.py to .gitignore file
+
+Go to terminal and run the following: python3 manage.py makemigrations, then python3 manage.py migrate to migrate all existing migrations to postgres database.
+
+Create a superuser: python3 manage.py createsuperuser
+
+Run it with the following command:
+python manage.py runserver
+
+Open localhost:8000 on your browser
+
+Add /admin to the end of the url address and login with your superuser account and create new products.
 
 
 ## Branching
