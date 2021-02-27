@@ -229,17 +229,32 @@ ID | As a          |  I want to be able to | So that I can
   
   -   ## Products Page
      
-     The "All products" page displays each product card.  The Product card contains the following Product information - Image, Category, Name, Customer Rating, Price & Type.      When User clicks on the Product image they are redirected to the Product Details.
+   The "All products" page displays each Product card.  The Product card contains the following Product information - Image, Category, Name, Customer Rating, Price & Type.     When User clicks on the Product image they are redirected to the Product Details page.
      
    <img src="/static/img/products.png">  
      
   -   ## Products Details
      
-     The Product Details page contains the following Product information - Details, Image, Category, Name, Customer Rating, Price & Type. In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
+  The Product Details page contains the following Product information - Details, Image, Category, Name, Customer Rating, Price & Type. In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
      
    <img src="/static/img/products_detail.png">      
      
-     Once the User clicks 'Add to Basket', they will be prompted with success message that item has been added to basket
+  -   ## Courses Page
+     
+   The "All Courses" page displays each Course card.  The Course card contains the following Course information - Image, Name & Description.  When User clicks on the Course image they are redirected to the Course Details page.
+     
+   <img src="/static/img/courses.png">  
+     
+  -   ## Course Details
+     
+  The Course Details page contains the following Course information - Details, Image, Category, Name, Customer Rating, Price & Type. In the Product Detail page the User      can enter the Quantity of the Product they wish to Purchase and add the Product to their basket.  The Product Detail page also gives the Registered User the option to        Add a Product Review.
+     
+   <img src="/static/img/products_detail.png">      
+      
+   
+   
+   
+   Once the User clicks 'Add to Basket', they will be prompted with success message that item has been added to basket
      
    <img src="/static/img/products_basket.png">   
      
