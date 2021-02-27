@@ -1,6 +1,6 @@
 <div class="container-top col-lg-12 index-course-container justify-content-center" data-aos="fade-up" data-aos-duration="1000">
     <h2 class="text-center pt-3 text-white">Our Courses</h2>
-   <div class="row">
+    <div class="row">
         <div class="col-md-6 p-2">
             <div class="card m-3 h-100">
                 <div class="card-body text-center">
@@ -12,49 +12,49 @@
             </div>
         </div>
         <div class="col-md-6 p-2">
-             <div class="card m-3 h-100">
+            <div class="card m-3 h-100">
                 <div class="card-body text-center">
                     <h5 class="card-title text-black">PMP Bootcamp Refresher Course</h5>
                     <i class="fas fa-chalkboard-teacher fa-lg icon-orange"></i>
                     <p class="card-text">Have you attended a Project Management Course in the past and never quite got around to sitting that Project Management Exam and gaining your PMP certification?</p>
                     <a href="{% url 'courses' %}" class="btn btn-black rounded-0 text-uppercase">View Course</a>
                 </div>
-             </div>         
-        </div>   
-    </div>
-            <div class="row">
-            <div class="col p-1">
-                    <div class="card m-3">
-                        <div class="card-body text-center justify-content-center">
-                            <p class="card-text">If you are interested in any of our courses please get in touch.</p>
-                            <a href="{% url 'contact' %}" class="btn btn-black rounded-0 text-uppercase">Contact Us</a>                           
-                                </div>
-                            </div>
-                        </div>
             </div>
-            <div class="row">
-      <div class="col p-1">
-             <div class="card m-3">
-                 <h5 class="card-title text-black text-center pt-3">Course Availability</h5>
-                                <table class="table table-sm table-borderless">
-                                    <thead class="">
-                                        <tr class="">
-                                            <th class="text-center" width="50%">Course</th>
-                                            <th class="text-center" width="50%">Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {% for date in dates %}
-                                            <tr>
-                                                <td class="text-center">                                       
-                                                    {{ date.product }}
-                                                </td>
-                                                <td class="text-center">{{ date.date_available  }}</td>
-                                            </tr>
-                                        {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col p-1">
+            <div class="card m-3">
+                <div class="card-body text-center justify-content-center">
+                    <p class="card-text">If you are interested in any of our courses please get in touch.</p>
+                    <a href="{% url 'contact' %}" class="btn btn-black rounded-0 text-uppercase">Contact Us</a>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col p-1">
+            <div class="card m-3">
+                <h5 class="card-title text-black text-center pt-3">Course Availability</h5>
+                <table class="table table-sm table-borderless">
+                    <thead class="">
+                        <tr class="">
+                            <th class="text-center" width="50%">Course</th>
+                            <th class="text-center" width="50%">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for date in dates %}
+                        <tr>
+                            <td class="text-center">
+                                {{ date.product }}
+                            </td>
+                            <td class="text-center">{{ date.date_available  }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

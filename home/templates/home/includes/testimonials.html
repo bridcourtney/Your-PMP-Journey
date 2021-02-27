@@ -1,26 +1,25 @@
 <!--https://stackoverflow.com/questions/60953929/slider-in-django-website-using-bootstrap4-carousel-->
 <div class="container-top col-12" data-aos="fade-up" data-aos-duration="1000">
-<h2 class="text-center pt-3 text-black">Testimonials</h2>
+    <h2 class="text-center pt-3 text-black">Testimonials</h2>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        {% for testimonial in testimonials %}
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for testimonial in testimonials %}
             {% if forloop.first %}
-                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" class="active"></li>
             {% else %}
-                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"></li>
-
+            <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"></li>
             {% endif %}
-        {% endfor %}
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        {% for testimonial in testimonials %}
+            {% endfor %}
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            {% for testimonial in testimonials %}
             {% if forloop.first %}
-                <div class="carousel-item active">
-            {% else %}
+            <div class="carousel-item active">
+                {% else %}
                 <div class="carousel-item">
-            {% endif %}
+                    {% endif %}
                     <div class="card-reviews card pb-3">
                         <div class="row g-0">
                             <div class="col-md-9">
@@ -29,13 +28,13 @@
                                     <p class="card-text ">-{{testimonial.full_name}} {{testimonial.created}}</p>
                                 </div>
                             </div>
-                            <div class="col-md-3">                              
-                                <img class="card-img-top mx-auto d-block" style="width: 152px; height: 150px;" src="{{ MEDIA_URL }}pmp.png" alt="PMP Logo">             
+                            <div class="col-md-3">
+                                <img class="card-img-top mx-auto d-block" style="width: 152px; height: 150px;" src="{{ MEDIA_URL }}pmp.png" alt="PMP Logo">
                             </div>
                         </div>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-        {% endfor %}
+        </div>
     </div>
-</div>
-</div>
