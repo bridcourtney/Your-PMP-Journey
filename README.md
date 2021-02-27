@@ -358,6 +358,54 @@ The following is the websites ERD (Entity Relationship Diagram) -
  
   <img src="/static/img/ERD_DETAIL.PNG">
 
+# Technologies Used
+
+## Languages Used
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://www.javascript.com/)
+-   [Python](https://www.python.org/)
+-   [Jinja](https://jinja.palletsprojects.com/en/2.10.x/)
+
+## Libraries & Frameworks
+- [Django](https://www.djangoproject.com/) - Python framework for building the project.
+- [Bootstrap]() - as the front-end framework for layout and design.
+- [Google Fonts]() - to import fonts.
+- [FontAwesome]() - to provide icons used across the project.
+- [JQuery]() - to simplify DOM manipulation and to initialize Bootstrap functions.
+- {Gunicorn}() - a Python WSGI HTTP Server to enable deployment to Heroku.
+- [Psycopg2]() - to enable the PostgreSQL database to function with Django.
+- [Stripe]() - to handle financial transactions.
+- [Django]() Crispy Forms - to style Django forms.
+- [Google Maps JavaScript API]()- to render the map in Contact page.
+
+## Technology Used
+ - GitPod - an online IDE for developing this project.
+ - Git - for version control.
+ - GitHub - for remotely storing project's code.
+ - PIP - for installation of necessary tools.
+ - GIMP2 - for editing VDU logo.
+ - Am I Responsive - for creation of the images in the readme file and checking responsiveness.
+ - Flickr - to host Workstation images
+
+ ## Front-End
+ - HTML - to build the foundation of the project.
+ - CSS - to create custom styles.
+
+## Back-End
+ - Python 3.8.2 - back-end programming language used in this project.
+ - Flask 1.1.2 - microframework for building and rendering pages.
+ - MongoDB Atlas - NoSQL database for storing back-end data.
+ - PyMongo - for Python to get access the MongoDB database.
+ - WTForms 2.2.1 - for creating forms with validation.
+ - Werkzeug 0.16.1 - to generate and verify password hashing.
+ - Jinja 2.10.1 - templating language for Python, to display back-end data in HTML.
+ - Heroku - to host the project.
+
+
+
+
+
 # Testing
 
 The application was tested heavily.  All requirement functionality was tested and objective evidence of each test script attached.  Please view the Executed Test Protocol in link below - 
