@@ -338,10 +338,17 @@ I would like to allow User to Edit / Delete their Reviews and Testimonial.  At t
 
  
 # Information Architecture
-The website contains the following apps -  About, Bag, Checkout, Contact, Home, Products, Profiles & Testimonials
+## Database choice
 
-The Products App contains the following Models - Product, Category, ProductReview & DatesAvailable
-The Checkout App contains the following Models - Order & OrderLineItem
+During the development phase I worked with sqlite3 database which is installed with Django.  For deployment(production), a PostgreSQL database is provided by Heroku as an add-on.
+
+## Data Modelling
+The User model is provided by Django as a part of defaults django.contrib.auth.models.
+
+The following apps were created for this website -  About, Bag, Checkout, Contact, Home, Products, Profiles & Testimonials.
+
+- The Products App contains the following Models - Product, Category, ProductReview & DatesAvailable.
+- The Checkout App contains the following Models - Order & OrderLineItem
 
 The following is the websites ERD (Entity Relationship Diagram) - 
 
