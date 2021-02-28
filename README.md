@@ -89,7 +89,7 @@ ID | As a          |  I want to be able to | So that I can
     -   Desktop & Tablet - [View](data/wireframes/desktop_tablet.pdf)
     -   Mobile - [View](data/wireframes/mobile.pdf)
          
-# Features
+# 2. Features
 
 -   ## Navbar
 -    For Visitors to the site, the following links are available in the Navbar - 
@@ -328,7 +328,7 @@ The website contains the following basis  404 and 500 pages  Each page contains 
 I would like to allow User to Edit / Delete their Reviews and Testimonial.  At the moment this is only possible from the Django Admin Area.  I would also like to render the Users testimonial & Reviews to their User Profile page
 
  
-# Information Architecture
+# 3. Information Architecture
 ## Database choice
 
 During the development phase I worked with sqlite3 database which is installed with Django.  For deployment(production), a PostgreSQL database is provided by Heroku as an add-on.
@@ -349,7 +349,7 @@ The following is the websites ERD (Entity Relationship Diagram) -
  
   <img src="/static/img/ERD_DETAIL.PNG">
 
-# Technologies Used
+# 4. Technologies Used
 
 ## Languages
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -392,7 +392,7 @@ The following is the websites ERD (Entity Relationship Diagram) -
 - [PostgreSQL](https://www.postgresql.org/) - a production database.
 
 
-# Testing
+# 5. Testing
 
 The application was tested to ensure it successfully met the expectations of each User Story without error.  Please view the Executed Test Protocol in link below - 
 
@@ -423,7 +423,7 @@ All python files were tested through PEP8 Online validator.
  I used the Google Chrome's developer tools to see how it looks across all the different device screen sizes to ensure compatibility and responsiveness.
  I also used Am I Responsive online tool for checking responsiveness on different devices.
  
-# Deployment
+# 6. Deployment
 
 ## Local Deployment
 
@@ -536,12 +536,12 @@ In order to send real emails from the application, you need to connect it to you
 4. Add your Google Maps key into the environment variable locally in the env.py file:
 5. os.environ["GOOGLE_MAP_KEY"] = "<Your Google Map key>" and in production in the Heroku Config Vars as GOOGLE_MAP_KEY.
 
-## Code & Credits
+# 7. Code & Credits
  - The idea of Google Map API in Contact Form was inspired from https://github.com/irinatu17/Art-of-Tea
  - The idea to flag course by Boolean is_a_service in the Product Model was inspired from https://github.com/irinatu17/Art-of-Tea
  - The project's code was developed by following the Code Institute lessons for the Boutique Ado Django Mini-Project, and customised to meet the requirements of my project
 
-## Acknowledgements
+# 8. Acknowledgements
 
 -   My Mentor Brian Macharia for continuous helpful feedback, excellent support material and very productive mentoring sessions
 
