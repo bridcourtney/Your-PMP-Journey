@@ -60,6 +60,7 @@ Anyone who aspires to attain PMP certification should be prepared for the exam. 
   * [Databases](#databases)
 - [5. Testing](#5-testing)
   * [Validators](#validators)
+    + [404 & 500 Handling](#404-&-500-Handling)
     + [Html](#html)
     + [CSS](#css)
     + [JavaScript](#javascript)
@@ -458,6 +459,11 @@ The following is the websites ERD (Entity Relationship Diagram) -
 The application was tested to ensure it successfully met the expectations of each User Story without error.  Please view the Executed Test Protocol in link below - 
 
  -   Executed Test Protocol - [View](Test_Protocol/Test_Scripts_performed.pdf)
+
+## 404 & 500 Handling
+
+The pages are created, and django handles all 404 requests & 500 and redirects to the relevant template. All attempts to access invalid URLS returns the 404 page.
+
     
 ## Validators
 
