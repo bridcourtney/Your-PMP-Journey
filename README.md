@@ -333,7 +333,7 @@ ID | As a          |  I want to be able to | So that I can
      If a user already has a profile with the shipping information saved, the form will be pre-populated with this information.
      The User is informed how much the card will be charged in the paragraph below the Proceed to payment button.
      The user must provide card number, expiration date and CVC.  For Testing purposes, card number 4242 4242 4242 4242 is used for successful stripe payment.
-     A webhook is used to make sure that the order is processed even in the cases when the payment process is interrupted (e.g. if a user accidentally closes the page or          browser after clicking "Proceed to payment" button).
+     A webhook is used to make sure that the order is processed even in the cases when the payment process is interrupted (e.g. if a user accidentally closes the page or          browser after clicking "Complete Order" button).
      
      <img src="/static/img/basket_checkout.png">
        
@@ -460,7 +460,7 @@ The following is the websites ERD (Entity Relationship Diagram) -
 
 The application was tested to ensure it successfully met the expectations of each User Story without error.  Please view the Executed Test Protocol in link below - 
 
- -   Executed Test Protocol - [View](Test_Protocol/Test_Scripts_performed.pdf)
+ -   Executed Test Protocol - [View](Test_Protocol/test_Protocol.pdf)
 
 ## 404 & 500 Error Handling
 
