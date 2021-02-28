@@ -66,6 +66,7 @@ Anyone who aspires to attain PMP certification should be prepared for the exam. 
     + [JavaScript](#javascript)
     + [Python](#python)
     + [Compatibility and Responsiveness](#compatibility-and-responsiveness)
+    + [Known Bugs](#known-bugs)
 - [6. Deployment](#6-deployment)
   * [Local Deployment](#local-deployment)
   * [Deployment to Heroku](#deployment-to-heroku)
@@ -490,6 +491,12 @@ All python files were tested through PEP8 Online validator.
 
  I used the Google Chrome's developer tools to see how it looks across all the different device screen sizes to ensure compatibility and responsiveness.
  I also used Am I Responsive online tool for checking responsiveness on different devices.
+
+### Known Bugs
+
+Courses are in the Product Model, what differentiates Course from Products is the is_a_service boolean flag in the Product Model.
+Courses therefore can be added / edited & deleted by SuperUsers in Product Mangement Section.  When a SuperUser performs any of the CRUD Actions on a Course, they are redircted to the Product Details page. 
+I know how to fix the issue, but did not have time to complete
  
 # 6. Deployment
 
