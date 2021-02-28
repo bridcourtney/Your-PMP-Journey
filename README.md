@@ -29,60 +29,59 @@ ID | As a          |  I want to be able to | So that I can
 ||| **Viewing and Navigation**          
 1 | Shopper | View Website easily on all my Devices | Ensure the websites usability no matter what device
 2 | Shopper | View a list of Products & Courses | Select Products & Courses to Purchase
-3 | Shopper | View individual Product & Course Details | Select Courses by Date & products to Purchase
-4 | Shopper | View Site Users Product Reviews & customer rating | make a better choice by reading what Site User shared about their purchases and average Customer rating for each product
-4 | Shopper | View Site Users Course Testimonials | make a better choice by reading what Site User Course Testimonials
-5 | Shopper | Easily view the total of my purchases at each stage | Make sure I dont overspend
-6 | Shopper | To read about the Business | Decide if I am going to find what I am looking for
-7 | Shopper | Contact the Business Owners| Submit any queries I have regarding Products & Courses
+3 | Shopper | View individual Product & Course Details | Select Courses & Products to Purchase
+4 | Shopper | View Site Users Product Reviews & Customer Rating | make a better choice by reading what Site User shared about their purchases and average Customer rating for each product
+5 | Shopper | View Site Users Course Testimonials | Make a better choice by reading what Site User Course Testimonials
+6 | Shopper | Easily view the total of my purchases at each stage | Make sure I dont overspend
+7 | Shopper | To read about the Business | Decide if I am going to find what I am looking for
+8 | Shopper | Contact the Business Owners| Submit any queries I have regarding Products & Courses
   ||| **Registation and User Accounts**
-8 | Site Users | Easily Register for an account | Have a personal account and be able to view my profile
-9 | Site Users | Easily Login & logout to my account | Access my personal account information
-10 | Site Users | Add Product Reviews & Rating | help others make a better choice by reading about your purchases and the average Customer rating for each product
-11 | Site Users | Add Course Testimonials  | help others make a better choice by reading your Course Testimonial
-12 | Site Users | Easily recover my password if I forget | Recover access to my account
-13 | Site Users | Receive email confirmation when I register | Verify that my account registration was successful
-14 | Site Users | be personalised User | View and edit my profile details and view my order history
+9 | Site Users | Easily Register for an account | Have a personal account and be able to view my profile
+10 | Site Users | Easily Login & logout to my account | Access my personal account information
+11 | Site Users | Add Product Reviews & Rating | help others make a better choice by reading about your purchases and the average Customer rating for each product
+12 | Site Users | Add Course Testimonials  | help others make a better choice by reading your Course Testimonial
+13 | Site Users | Easily recover my password if I forget | Recover access to my account
+14 | Site Users | Receive email confirmation when I register | Verify that my account registration was successful
+15 | Site Users | be personalised User | View and edit my profile details and view my order history
 15 |  Site Users | Receive email order confirmation | Record of my transaction
   ||| **Sorting & Searching**
-16| Shopper| Sort the list of available Products | Easily identify by Price (high to low), by Author (A-Z), by Customer (A-Z) ??, by Category (Books or On Demand Videos)
-17| Shopper| Sort the list of Courses | Easily identify by Price (high to low), by provider (A-Z)
-18| Shopper| Search for a Product or Course by name or description | Find a specific product or Course I would like to purchase
-19| Shopper| Easily see what I searched for and the number of results | Quickly find if the product or Course I am looking for is available
+17| Shopper| Sort the list of available Products | Easily identify by Price (high to low), by Author (A-Z), by Customer (A-Z) ??, by Category (Books or On Demand Videos)
+18| Shopper| Sort the list of Courses | Easily identify by Price (high to low), by provider (A-Z)
+19| Shopper| Search for a Product or Course by name or description | Find a specific product or Course I would like to purchase
+20| Shopper| Easily see what I searched for and the number of results | Quickly find if the product or Course I am looking for is available
   ||| **Puchasing and Checkout**
-20| Shopper| Easily select the quantity of a product when purchasing it | Ensure I dont accidently select the wrong product or quantity of product
-21| Shopper| Easily select the number of participants for a Course if applicable | Ensure I dont accidently select the wrong Course or number of participant’s
-21| Shopper| Easily select the number months I want to subscribe to On Demand Videos | Ensure I dont accidently select the wrong number of month's
-22| Shopper| View items in my basket to be purchased | View the total cost of my purchase an all items I will receive
-23| Shopper| Adjust the quantity of products in the basket |Easily make changes to my product selected for purchase before checkout
-24| Shopper| Adjust the no of participants for Course in the basket | easily make changes to my Courses selected for purchase before checkout
-25| Shopper| Easily enter my payment information| Checkout smoothly and quickly
-26| Shopper| Feel my payment information is safe & secure | Confidentally provide the information needed for the purchase
-27| Shopper| Receive an email confirmation after checkout | Ensure sure the payment was successful & retain the confirmation of what I purchased
+21| Shopper| Easily select the quantity of a product when purchasing it | Ensure I dont accidently select the wrong product or quantity of product
+22| Shopper| Easily select the number of participants for a Course if applicable | Ensure I dont accidently select the wrong Course or number of participant’s
+23| Shopper| Easily select the number months I want to subscribe to On Demand Videos | Ensure I dont accidently select the wrong number of month's
+24| Shopper| View items in my basket to be purchased | View the total cost of my purchase an all items I will receive
+25| Shopper| Adjust the quantity of products in the basket |Easily make changes to my product selected for purchase before checkout
+26| Shopper| Adjust the no of participants for Course in the basket | easily make changes to my Courses selected for purchase before checkout
+27| Shopper| Easily enter my payment information| Checkout smoothly and quickly
+28| Shopper| Feel my payment information is safe & secure | Confidentally provide the information needed for the purchase
+29| Shopper| Receive an email confirmation after checkout | Ensure sure the payment was successful & retain the confirmation of what I purchased
  ||| **Admin and Product Management**
-28| Shop Owner| Conveniently and securely access admin section | easily maintain the Website
-29| Shop Owner| Add a Product or Course | Add new Products & Courses to my shop
-30| Shop Owner| Add Course Available Dates | Maintain Course dates 
-31| Shop Owner| Edit/Update a Product or Course | Change any of the criteria for any Product or Courses in my shop
-32| Shop Owner| Delete a Product or Course | Remove Products or Courses from my shop
-33| Shop Owner| Delete a Customer Review or Testimonial | Remove a Customer Review or Testimonial from my shop
-34| Shop Owner| Receive emails from Users when they submit the contact form | Reply to User queries
+30| Shop Owner| Conveniently and securely access admin section | easily maintain the Website
+31| Shop Owner| Add a Product or Course | Add new Products & Courses to my shop
+32| Shop Owner| Add Course Available Dates | Maintain Course dates 
+33| Shop Owner| Edit/Update a Product or Course | Change any of the criteria for any Product or Courses in my shop
+34| Shop Owner| Delete a Product or Course | Remove Products or Courses from my shop
+35| Shop Owner| Delete a Customer Review or Testimonial | Remove a Customer Review or Testimonial from my shop
+36| Shop Owner| Receive emails from Users when they submit the contact form | Reply to User queries
 
 -   ## Design Choices
   
-      -   ### Colour Scheme
-        The orange NavBar is eye catching and and the orange text in the footer pulls the two elements together.  
-        There is alot of whitespace in the Product and Course, Basket and Checkout Pages.  The whitespace draws attention and attracts the user to 
-           the eyecatching buttons and good quality images
+   -   ### Colour Scheme
+        - The orange NavBar is eye catching and and the orange text in the footer pulls the two elements together.  
+        - There is alot of whitespace in the Product and Course, Basket and Checkout Pages.  The whitespace draws attention and attracts the user to the eyecatching buttons             and good quality images
     
-      -   ### Imagery 
-         I selected images that are relevant to the content of the application.  
+   -   ### Imagery 
+       I selected images that are relevant to the content of the application.  
       
       
-      -   ### Font & Icons 
-        -  Font Josefin Sans   
-        -  The icon in the navbar is a good fit for the theme of the application
-        -  Icons break up the information visually, creating space for the user and not overwhelming them with too much info at once.
+   -   ### Font & Icons 
+     -  Font Josefin Sans   
+      -  The icon in the navbar is a good fit for the theme of the application
+      -  Icons break up the information visually, creating space for the user and not overwhelming them with too much info at once.
         -  Each icon was chosen for it's clarity in quickly explaining the relevant meaning with an image.
 
 
