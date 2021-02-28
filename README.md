@@ -452,8 +452,8 @@ The following is the websites ERD (Entity Relationship Diagram) -
 - [AOS](https://michalsnik.github.io/aos/)- Animate Elements.
 
 ## Databases
-- [SQlite3](https://www.sqlite.org/index.html) - a development database.
-- [PostgreSQL](https://www.postgresql.org/) - a production database.
+- [SQlite3](https://www.sqlite.org/index.html) - Development database.
+- [PostgreSQL](https://www.postgresql.org/) - Production database.
 
 
 # 5. Testing
