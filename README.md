@@ -60,7 +60,7 @@ Anyone who aspires to attain PMP certification should be prepared for the exam. 
   * [Databases](#databases)
 - [5. Testing](#5-testing)
   * [Validators](#validators)
-    + [404 & 500 Handling](#404-&-500-Handling)
+    + [404 & 500 Handling](#404---500-handling)
     + [Html](#html)
     + [CSS](#css)
     + [JavaScript](#javascript)
