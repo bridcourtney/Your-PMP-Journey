@@ -10,7 +10,7 @@ For Sligo PMI Training to gain accreditation for its educational programmes, acc
 
 PMP certification can be extremely valuable if you plan to advance in the current company you are working at. It puts you way ahead of your colleagues in terms of moving up the career ladder. Also, a certified manager can do much better in a gruelling project management interview than a non-certified one.
 
-The fail rate for the PMP exam is actually quite high at an estimated 40-50% for first-time test-takers. There is no specific number of questions that must be answered correctly in order to pass the PMP exam.  This is high and can be a costly journey.  
+The fail rate for the PMP exam is quite high at an estimated 40-50% for first-time test-takers. There is no specific number of questions that must be answered correctly in order to pass the PMP exam.  This is high and can be a costly journey.  
 
 Anyone who aspires to attain PMP certification should be prepared for the exam. Consequently, first-time test takers should also be advised that the PMP certification exam is extremely difficult. The exam consists of 200 multiple-choice questions in a period of only four hours.
 
@@ -18,8 +18,7 @@ Anyone who aspires to attain PMP certification should be prepared for the exam. 
 
 -   ## Project Goals
 
-The Journey to accomplishing the PMP (Project Management Professional) accreditation is not easy.  It requires hours of study and thats after you complete the PMI® Authorized PMP® Exam Prep 5 day course.  This website is a guide to persons on the PMP trial.  It provides plenty of study resources suggestions in our Products section and of course we offer the first step, the PMI® Authorized PMP® Exam Prep 5 day course.
-The main objective in creating the PMP Journey application is to provide the user with a simple to use e-commerce site, with filtering of Products & Courses by Price, Category & Author.  Abilty to book Courses by date.  The PMP Journey application also offers authenticated users the option to add Product Reviews and Course Testimonials.
+The Journey to accomplishing the PMP (Project Management Professional) accreditation is not easy. It requires hours of study and that’s after you complete the PMI® Authorized PMP® Exam Prep 5 day course. This website is a guide to persons on the PMP trial. It provides plenty of study resources suggestions in our Products section and of course we offer the first step, the PMI® Authorized PMP® Exam Prep 5 day course. The main objective in creating the PMP Journey application is to provide the user with a simple to use e-commerce site, with filtering of Products & Courses by Price, Category & Author. Ability to book Courses by date. The PMP Journey application also offers authenticated users the option to add Product Reviews and Course Testimonials.
 
      
 -   ## User Stories
@@ -30,7 +29,7 @@ ID | As a          |  I want to be able to | So that I can
 1 | Shopper | View Website easily on all my Devices | Ensure the websites usability no matter what device
 2 | Shopper | View a list of Products & Courses | Select Products & Courses to Purchase
 3 | Shopper | View individual Product & Course Details | Select Courses & Products to Purchase
-4 | Shopper | View Site Users Product Reviews & Customer Rating | make a better choice by reading what Site User shared about their purchases and average Customer rating for each product
+4 | Shopper | View Site Users Product Reviews & Customer Rating | Make a better choice by reading what Site User shared about their purchases and average Customer rating for each product
 5 | Shopper | View Site Users Course Testimonials | Make a better choice by reading what Site User Course Testimonials
 6 | Shopper | Easily view the total of my purchases at each stage | Make sure I dont overspend
 7 | Shopper | To read about the Business | Decide if I am going to find what I am looking for
@@ -38,17 +37,17 @@ ID | As a          |  I want to be able to | So that I can
   ||| **Registation and User Accounts**
 9 | Site Users | Easily Register for an account | Have a personal account and be able to view my profile
 10 | Site Users | Easily Login & logout to my account | Access my personal account information
-11 | Site Users | Add Product Reviews & Rating | help others make a better choice by reading about your purchases and the average Customer rating for each product
-12 | Site Users | Add Course Testimonials  | help others make a better choice by reading your Course Testimonial
+11 | Site Users | Add Product Reviews & Rating | Help others make a better choice by reading about your purchases and the average Customer rating for each product
+12 | Site Users | Add Course Testimonials  | Help others make a better choice by reading your Course Testimonial
 13 | Site Users | Easily recover my password if I forget | Recover access to my account
 14 | Site Users | Receive email confirmation when I register | Verify that my account registration was successful
-15 | Site Users | be personalised User | View and edit my profile details and view my order history
+15 | Site Users | Be personalised User | View and edit my profile details and view my order history
 15 |  Site Users | Receive email order confirmation | Record of my transaction
   ||| **Sorting & Searching**
-17| Shopper| Sort the list of available Products | Easily identify by Price (high to low), by Author (A-Z), by Customer (A-Z) ??, by Category (Books or On Demand Videos)
+17| Shopper| Sort the list of available Products | Easily identify by Price (high to low), by Author (A-Z), by Customer (A-Z), by Category (Books or On Demand Videos)
 18| Shopper| Sort the list of Courses | Easily identify by Price (high to low), by provider (A-Z)
-19| Shopper| Search for a Product or Course by name or description | Find a specific product or Course I would like to purchase
-20| Shopper| Easily see what I searched for and the number of results | Quickly find if the product or Course I am looking for is available
+19| Shopper| Search for a Product by name or description | Find a specific product I would like to purchase or attend
+20| Shopper| Easily see what I searched for and the number of results | Quickly find if the product I am looking for is available
   ||| **Puchasing and Checkout**
 21| Shopper| Easily select the quantity of a product when purchasing it | Ensure I dont accidently select the wrong product or quantity of product
 22| Shopper| Easily select the number of participants for a Course if applicable | Ensure I dont accidently select the wrong Course or number of participant’s
@@ -56,7 +55,7 @@ ID | As a          |  I want to be able to | So that I can
 24| Shopper| View items in my basket to be purchased | View the total cost of my purchase an all items I will receive
 25| Shopper| Adjust the quantity of products in the basket |Easily make changes to my product selected for purchase before checkout
 26| Shopper| Adjust the no of participants for Course in the basket | easily make changes to my Courses selected for purchase before checkout
-27| Shopper| Easily enter my payment information| Checkout smoothly and quickly
+27| Shopper| Easily enter my payment information | Checkout smoothly and quickly
 28| Shopper| Feel my payment information is safe & secure | Confidentally provide the information needed for the purchase
 29| Shopper| Receive an email confirmation after checkout | Ensure sure the payment was successful & retain the confirmation of what I purchased
  ||| **Admin and Product Management**
@@ -395,33 +394,31 @@ The following is the websites ERD (Entity Relationship Diagram) -
 
 # Testing
 
-The application was tested heavily.  All requirement functionality was tested and objective evidence of each test script attached.  Please view the Executed Test Protocol in link below - 
+The application was tested to ensure it successfully met the expectations of each User Story without error.  Please view the Executed Test Protocol in link below - 
 
  -   Executed Test Protocol - [View](Test_Protocol/Test_Scripts_performed.pdf)
-
-
     
-# Validators
+## Validators
 
-## Html
+### Html
 
-All the HTML files were tested through W3C Markup Validation Service. I used the 'view page source' option, since W3C Markup Validation Service does not recognize Jinja2 templating language.  I was able to correct all findings.
+All the HTML files were tested through W3C Markup Validation Service.
 
-## CSS
+### CSS
 
-CSS files were tested through W3C CSS Validation Service. I was able to correct all findings.
+CSS files were tested through W3C CSS Validation Service.
 
-## JavaScript
+### JavaScript
 
-Script files were tested through W3C CSS Validation Service. I was able to correct all findings.
-
-
-## Python
-
-All python files were tested through PEP8 Online validator.  I was able to correct all findings.
+Script files were tested through W3C CSS Validation Service. 
 
 
-# Compatibility and Responsiveness
+### Python
+
+All python files were tested through PEP8 Online validator. 
+
+
+### Compatibility and Responsiveness
 
  I used the Google Chrome's developer tools to see how it looks across all the different device screen sizes to ensure compatibility and responsiveness.
  I also used Am I Responsive online tool for checking responsiveness on different devices.
@@ -533,36 +530,19 @@ The static files and media files (that will be uploaded by superuser - product/s
 In order to send real emails from the application, you need to connect it to your Gmail account, setting up your email address in EMAIL_HOST_USER variable and your app password generated by your email provider in EMAIL_HOST_PASS variable.
 
 ### Google Maps API key set up
-In the Google Cloud Platform Console create a new project.
-Click Continue to enable the API and any related services.
-Get an API key and set the API key restrictions on the Credentials page. 
-Add your Google Maps key into the environment variable locally in the env.py file:
-os.environ["GOOGLE_MAP_KEY"] = "<Your Google Map key>" and in production in the Heroku Config Vars as GOOGLE_MAP_KEY.
-
-## Branching
-  I used branching in this project.  I found it very useful at stages when I was embarking on new functionaility and not sure how it was going to turn out, it was reassuring   to know I had a choice whether to merge with the master or not.
-  I soon realised each time I created a branch from Github, the following installs were required - 
-   - pip3 install Flask
-   - pip3 install Flask-PyMongo
-   - pip3 install dnspython
-   - pip3 install flask_wtf
-   
-  Also, very important reinstate the env.py. Check requirements.txt is up to date, otherwise you will have problems loading in Heroku
+1. In the Google Cloud Platform Console create a new project.
+2. Click Continue to enable the API and any related services.
+3. Get an API key and set the API key restrictions on the Credentials page. 
+4. Add your Google Maps key into the environment variable locally in the env.py file:
+5. os.environ["GOOGLE_MAP_KEY"] = "<Your Google Map key>" and in production in the Heroku Config Vars as GOOGLE_MAP_KEY.
 
 ## Code & Credits
- - I referred to Flask and MongoDB documentation sources.
- - For building the Register, Login, Change Username/Password pages.  I followed the 'Python Mini Project Material'.
- - Flask WTForms Tutorials - Pretty Printed & https://flask.palletsprojects.com/en/1.1.x/patterns/wtforms/.  Also https://github.com/irinatu17/MyCookBook
- - For UI & UX design concept I took inspiration from Pinterest & unsplash
- - The idea of using prefix-icons, asterixes and question-mark tooltips in forms was taken from https://github.com/irinatu17/MyCookBook
+ - The idea of Google Map API in Contact Form was inspired from https://github.com/irinatu17/Art-of-Tea
+ - The idea to flag course by Boolean is_a_service in the Product Model was inspired from https://github.com/irinatu17/Art-of-Tea
+ - The project's code was developed by following the Code Institute lessons for the Boutique Ado Django Mini-Project, and customised to meet the requirements of my project
 
 ## Acknowledgements
 
 -   My Mentor Brian Macharia for continuous helpful feedback, excellent support material and very productive mentoring sessions
 
 -   Tutor support at Code Institute for their support.
-
-# User Experience (UX)
-
-## User Stories
-
