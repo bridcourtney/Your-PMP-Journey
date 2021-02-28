@@ -1,11 +1,10 @@
-import os
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render,\
+  redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import TestimonialForm
 from profiles.models import UserProfile
 from .models import Testimonial
-from django.contrib.auth.models import User
 
 
 def testimonials(request):
@@ -19,7 +18,6 @@ def testimonials(request):
     return render(request, 'home/includes/testimonials.html', context)
 
 
-
 @login_required
 def add_testimonial(request):
     """
@@ -30,7 +28,7 @@ def add_testimonial(request):
         profile = UserProfile.objects.get(user=request.user)
         form = Testimonial(
             content=request.POST.get('content'),
-            full_name = profile.default_full_name,
+            full_name=profile.default_full_name,
             user=request.user
         )
 

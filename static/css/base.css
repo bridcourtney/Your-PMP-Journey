@@ -7,8 +7,6 @@ body {
     font-family: 'Josefin Sans', sans-serif;  
 }
 
-/* This class is used in many of the template containers */
-
 .container-top{
     margin-left: 0px; 
     margin-right: 0px; 
@@ -40,6 +38,8 @@ min-height:40rem;
 .h1, h1 {
     font-size: 3.5rem;
 }
+
+
 
 /* from Bulma */
 .icon {
@@ -129,11 +129,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-/* Product & Course templates */
-
 .card-products{
 width: 100%;
 }
+
 
 .img-product-details{
  padding: 5%;   
@@ -214,6 +213,8 @@ width: 100%;
     overflow-y: auto;
 }
 
+
+
 /* Footer */
 
 footer {
@@ -221,6 +222,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 
 .footer-background {
     background: #343a40;
@@ -244,14 +246,20 @@ footer {
     
 }
 
+}
+
 .nav-links{
     padding-bottom: 2rem;
 }
 
+/* About page */
+
+
+
 /*Contact page*/
 
 .contact_success_message{
-    border-radius: 8px;
+     border-radius: 8px;
     padding-top: 1%;
     top: 30%;
     left:20%;
@@ -266,7 +274,7 @@ footer {
   background-image: url('/media/allAuthBG1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  min-height:40rem;
+min-height:40rem;
   height: 60vh;
 }
 
@@ -292,6 +300,18 @@ background-color: #343a40;
  color: #ffc107;     
 }
  
+}
+
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
 /* Allauth form formatting */
 
 /* Background image for account pages */
@@ -390,14 +410,6 @@ background-color: #343a40;
     border-radius: 0;
 }
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -460,3 +472,14 @@ background-color: #343a40;
 
    
 }
+}
+/*Media query for small devices (360px and up)*/
+@media (min-width: 360px) {
+
+
+/* Specific Media query for small devices from 501px to 768px width*/
+@media (min-width: 501px) and (max-width: 768px){
+
+}
+/* Specific Media query for small devices from 530px to 768px width*/
+@media (min-width: 530px) and (max-width: 768px){

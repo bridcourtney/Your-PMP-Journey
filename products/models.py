@@ -8,7 +8,8 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    friendly_name = models.CharField(max_length=254,
+                                     null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -28,8 +29,10 @@ class Product(models.Model):
         (PAPERBACK, 'Paperback'),
         ('', '')
     ]
-    book_type = models.CharField(max_length=254, choices=BOOK_TYPE_CHOICES, blank=True, default='')
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    book_type = models.CharField(max_length=254, choices=BOOK_TYPE_CHOICES,
+                                 blank=True, default='')
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     author = models.CharField(max_length=254)
@@ -56,22 +59,27 @@ class Product(models.Model):
 
 class ProductReview(models.Model):
     content = models.TextField()
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='reviews', related_query_name='reviews')
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews', related_query_name='reviews')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,
+                                related_name='reviews',
+                                related_query_name='reviews')
+    user = models.ForeignKey(User, on_delete=models.CASCADE,
+                             related_name='reviews',
+                             related_query_name='reviews')
     stars = models.IntegerField(null=False, blank=False, default=0)
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
     image = models.ImageField(null=True, blank=True)
-
 
     def __str__(self):
         return self.content
 
 
 class DatesAvailable(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='available', related_query_name='available')
-    date_available = models.CharField(max_length=254, null=True, blank=True)
-
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,
+                                related_name='available',
+                                related_query_name='available')
+    date_available = models.CharField(max_length=254,
+                                      null=True, blank=True)
 
     def __str__(self):
         return self.date_available

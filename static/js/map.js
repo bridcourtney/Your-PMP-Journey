@@ -1,3 +1,4 @@
+//I got this idea from https://github.com/irinatu17/Art-of-Tea
 //Initilizes the map from Google Maps API
 //Load the place information into the HTML elements used by the info window.
 

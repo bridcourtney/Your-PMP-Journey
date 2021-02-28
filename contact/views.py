@@ -18,7 +18,7 @@ def contact(request):
             message = form.cleaned_data['message']
             try:
                 send_mail(
-                    #The user email will be captured and
+                    # The user email will be captured and
                     # displayed in the subject field
                     f"Message from {full_name}, <{user_email}>",
                     message,

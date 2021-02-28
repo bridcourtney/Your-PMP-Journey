@@ -33,20 +33,21 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search\
+                     criteria!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(name__icontains=query) | \
+                Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -65,14 +66,13 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    
 
-    #Add Review
+    # Add Review
     if request.method == 'POST' and request.user.is_authenticated:
-        stars = request.POST.get('stars',3)
-        content = request.POST.get('content','')
+        stars = request.POST.get('stars', 3)
+        content = request.POST.get('content', '')
 
-        review = ProductReview.objects.create(product=product,user=request.user, stars=stars, content=content, image=product.image)
+        review = ProductReview.objects.create(product=product, user=request.user, stars=stars, content=content, image=product.image)
         messages.success(request, 'Successfully added Review!')
 
     context = {
@@ -85,7 +85,6 @@ def product_detail(request, product_id):
 def courses(request):
     """ A view to display all of the courses"""
     products = Product.objects.filter(is_a_service=True)
-    
 
     query = None
     categories = None
@@ -105,7 +104,7 @@ def courses(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -124,7 +123,7 @@ def course_detail(request, product_id):
     """ A view to show individual course details """
 
     product = get_object_or_404(Product, pk=product_id)
-    dates = DatesAvailable.objects.filter(product_id = product_id)
+    dates = DatesAvailable.objects.filter(product_id=product_id)
 
     context = {
         'product': product,
@@ -148,16 +147,18 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product.\
+            Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):
@@ -174,7 +175,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product.\
+                Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -194,7 +196,7 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')

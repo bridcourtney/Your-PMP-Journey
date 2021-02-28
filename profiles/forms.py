@@ -6,7 +6,6 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         exclude = ('user',)
-        
 
     def __init__(self, *args, **kwargs):
         """
