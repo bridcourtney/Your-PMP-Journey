@@ -79,11 +79,9 @@ ID | As a          |  I want to be able to | So that I can
       
       
    -   ### Font & Icons 
-     -  Font Josefin Sans   
-      -  The icon in the navbar is a good fit for the theme of the application
-      -  Icons break up the information visually, creating space for the user and not overwhelming them with too much info at once.
-        -  Each icon was chosen for it's clarity in quickly explaining the relevant meaning with an image.
-
+       - I selected Josefin Sans for consistent font throughout the Site 
+       - The icons in the navbar are a good fit for the theme of the application
+       - Icons break up the information visually, creating space for the user and not overwhelming them with too much info at once.     
 
 -   ## Wireframes
     
