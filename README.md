@@ -42,7 +42,7 @@ ID | As a          |  I want to be able to | So that I can
 13 | Site Users | Easily recover my password if I forget | Recover access to my account
 14 | Site Users | Receive email confirmation when I register | Verify that my account registration was successful
 15 | Site Users | Be personalised User | View and edit my profile details and view my order history
-15 |  Site Users | Receive email order confirmation | Record of my transaction
+16 |  Site Users | Receive email order confirmation | Record of my transaction
   ||| **Sorting & Searching**
 17| Shopper| Sort the list of available Products | Easily identify by Price (high to low), by Author (A-Z), by Customer (A-Z), by Category (Books or On Demand Videos)
 18| Shopper| Sort the list of Courses | Easily identify by Price (high to low), by provider (A-Z)
