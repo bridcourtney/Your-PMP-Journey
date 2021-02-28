@@ -460,7 +460,7 @@ The following is the websites ERD (Entity Relationship Diagram) -
 
 The application was tested to ensure it successfully met the expectations of each User Story without error.  Please view the Executed Test Protocol in link below - 
 
- -   Executed Test Protocol - [View](Test_Protocol/test_Protocol.pdf)
+ -   Executed Test Protocol - [View](data/Test_Protocol/test_Protocol.pdf)
 
 ## 404 & 500 Error Handling
 
