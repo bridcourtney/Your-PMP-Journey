@@ -60,11 +60,13 @@ Anyone who aspires to attain PMP certification should be prepared for the exam. 
   * [Databases](#databases)
 - [5. Testing](#5-testing)
   * [Validators](#validators)
+    + [404 & 500 Error Handling](#404---500-error-handling)
     + [Html](#html)
     + [CSS](#css)
     + [JavaScript](#javascript)
     + [Python](#python)
     + [Compatibility and Responsiveness](#compatibility-and-responsiveness)
+    + [Known Bugs](#known-bugs)
 - [6. Deployment](#6-deployment)
   * [Local Deployment](#local-deployment)
   * [Deployment to Heroku](#deployment-to-heroku)
@@ -81,7 +83,7 @@ The Journey to accomplishing the PMP (Project Management Professional) accredita
 
      
 -   ## User Stories
-  
+
 ID | As a          |  I want to be able to | So that I can
 ------------  | ------------- |  ------------        | -------------
 ||| **Viewing and Navigation**          
@@ -90,32 +92,32 @@ ID | As a          |  I want to be able to | So that I can
 3 | Shopper | View individual Product & Course Details | Select Courses & Products to Purchase
 4 | Shopper | View Site Users Product Reviews & Customer Rating | Make a better choice by reading what Site User shared about their purchases and average Customer rating for each product
 5 | Shopper | View Site Users Course Testimonials | Make a better choice by reading what Site User Course Testimonials
-6 | Shopper | Easily view the total of my purchases at each stage | Make sure I dont overspend
+6 | Shopper | Easily view the total of my purchases at each stage | Make sure I don’t overspend
 7 | Shopper | To read about the Business | Decide if I am going to find what I am looking for
 8 | Shopper | Contact the Business Owners| Submit any queries I have regarding Products & Courses
-  ||| **Registation and User Accounts**
+  ||| **Registration and User Accounts**
 9 | Site Users | Easily Register for an account | Have a personal account and be able to view my profile
 10 | Site Users | Easily Login & logout to my account | Access my personal account information
 11 | Site Users | Add Product Reviews & Rating | Help others make a better choice by reading about your purchases and the average Customer rating for each product
-12 | Site Users | Add Course Testimonials  | Help others make a better choice by reading your Course Testimonial
+12 | Site Users | Add Course Testimonials | Help others make a better choice by reading your Course Testimonial
 13 | Site Users | Easily recover my password if I forget | Recover access to my account
 14 | Site Users | Receive email confirmation when I register | Verify that my account registration was successful
 15 | Site Users | Be personalised User | View and edit my profile details and view my order history
-16 |  Site Users | Receive email order confirmation | Record of my transaction
+16 | Site Users | Receive email order confirmation | Record of my transaction
   ||| **Sorting & Searching**
 17| Shopper| Sort the list of available Products | Easily identify by Price (high to low), by Author (A-Z), by Customer (A-Z), by Category (Books or On Demand Videos)
 18| Shopper| Sort the list of Courses | Easily identify by Price (high to low), by provider (A-Z)
 19| Shopper| Search for a Product by name or description | Find a specific product I would like to purchase or attend
 20| Shopper| Easily see what I searched for and the number of results | Quickly find if the product I am looking for is available
-  ||| **Puchasing and Checkout**
-21| Shopper| Easily select the quantity of a product when purchasing it | Ensure I dont accidently select the wrong product or quantity of product
-22| Shopper| Easily select the number of participants for a Course if applicable | Ensure I dont accidently select the wrong Course or number of participant’s
-23| Shopper| Easily select the number months I want to subscribe to On Demand Videos | Ensure I dont accidently select the wrong number of month's
+  ||| **Purchasing and Checkout**
+21| Shopper| Easily select the quantity of a product when purchasing it | Ensure I don’t accidently select the wrong product or quantity of product
+22| Shopper| Easily select the number of participants for a Course if applicable | Ensure I don’t accidently select the wrong Course or number of participant’s
+23| Shopper| Easily select the number months I want to subscribe to On Demand Videos | Ensure I don’t accidently select the wrong number of month's
 24| Shopper| View items in my basket to be purchased | View the total cost of my purchase an all items I will receive
 25| Shopper| Adjust the quantity of products in the basket |Easily make changes to my product selected for purchase before checkout
 26| Shopper| Adjust the no of participants for Course in the basket | easily make changes to my Courses selected for purchase before checkout
 27| Shopper| Easily enter my payment information | Checkout smoothly and quickly
-28| Shopper| Feel my payment information is safe & secure | Confidentally provide the information needed for the purchase
+28| Shopper| Feel my payment information is safe & secure | Confidentially provide the information needed for the purchase
 29| Shopper| Receive an email confirmation after checkout | Ensure sure the payment was successful & retain the confirmation of what I purchased
  ||| **Admin and Product Management**
 30| Shop Owner| Conveniently and securely access admin section | easily maintain the Website
@@ -126,7 +128,8 @@ ID | As a          |  I want to be able to | So that I can
 35| Shop Owner| Delete a Customer Review or Testimonial | Remove a Customer Review or Testimonial from my shop
 36| Shop Owner| Receive emails from Users when they submit the contact form | Reply to User queries
 
--   ## Design Choices
+  
+  -   ## Design Choices
   
    -   ### Colour Scheme
         - The orange NavBar is eye catching and and the orange text in the footer pulls the two elements together.  
@@ -155,6 +158,7 @@ ID | As a          |  I want to be able to | So that I can
        - Log in
        - Register
       The navigation bar features the PMP Journey logo in the top left corner and aslo search option for visitors.
+      
      <img src="/static/img/nav_u.png">
      
  -    For Users, the following links are available in the Navbar - 
@@ -329,7 +333,7 @@ ID | As a          |  I want to be able to | So that I can
      If a user already has a profile with the shipping information saved, the form will be pre-populated with this information.
      The User is informed how much the card will be charged in the paragraph below the Proceed to payment button.
      The user must provide card number, expiration date and CVC.  For Testing purposes, card number 4242 4242 4242 4242 is used for successful stripe payment.
-     A webhook is used to make sure that the order is processed even in the cases when the payment process is interrupted (e.g. if a user accidentally closes the page or          browser after clicking "Proceed to payment" button).
+     A webhook is used to make sure that the order is processed even in the cases when the payment process is interrupted (e.g. if a user accidentally closes the page or          browser after clicking "Complete Order" button).
      
      <img src="/static/img/basket_checkout.png">
        
@@ -445,17 +449,23 @@ The following is the websites ERD (Entity Relationship Diagram) -
 - [W3C Validator](https://validator.w3.org/)- Check the validity HTML and CSS.
 - [Online JavaScript Beautifier](https://beautifier.io/)- Beautift HTML and JavaScript.
 - [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/)- Generate MarkDown TOC.
+- [AOS](https://michalsnik.github.io/aos/)- Animate Elements.
 
 ## Databases
-- [SQlite3](https://www.sqlite.org/index.html) - a development database.
-- [PostgreSQL](https://www.postgresql.org/) - a production database.
+- [SQlite3](https://www.sqlite.org/index.html) - Development database.
+- [PostgreSQL](https://www.postgresql.org/) - Production database.
 
 
 # 5. Testing
 
 The application was tested to ensure it successfully met the expectations of each User Story without error.  Please view the Executed Test Protocol in link below - 
 
- -   Executed Test Protocol - [View](Test_Protocol/Test_Scripts_performed.pdf)
+ -   Executed Test Protocol - [View](data/Test_Protocol/test_Protocol.pdf)
+
+## 404 & 500 Error Handling
+
+The pages are created, and django handles all 404 requests & 500 and redirects to the relevant template. All attempts to access invalid URLS returns the 404 page.  Also if a Visitor trys to access pages only for registered User access, a 404 will be returned.
+
     
 ## Validators
 
@@ -481,6 +491,12 @@ All python files were tested through PEP8 Online validator.
 
  I used the Google Chrome's developer tools to see how it looks across all the different device screen sizes to ensure compatibility and responsiveness.
  I also used Am I Responsive online tool for checking responsiveness on different devices.
+
+### Known Bugs
+
+Courses are in the Product Model, what differentiates Course from Products is the is_a_service boolean flag in the Product Model.
+Courses therefore can be added / edited & deleted by SuperUsers in Product Mangement Section.  When a SuperUser performs any of the CRUD Actions on a Course, they are redircted to the Product Details page. 
+I know how to fix the issue, but did not have time to complete
  
 # 6. Deployment
 
@@ -583,10 +599,12 @@ Key           | Vavue         |
 27. Returned to Heroku and hit Deploy Branch again.
 
 ### Hosting media files with AWS
-The static files and media files (that will be uploaded by superuser - product/service images) are hosted in the AWS S3 Bucket. To host them, you need to create an account in AWS and create your S3 basket with public access.
+
+The static files and media files (that will be uploaded by superuser - product images) are hosted in the AWS S3 Bucket. To host them, you need to create an account in AWS and create your S3 basket with public access.
 
 ### Sending email via Gmail
-In order to send real emails from the application, you need to connect it to your Gmail account, setting up your email address in EMAIL_HOST_USER variable and your app password generated by your email provider in EMAIL_HOST_PASS variable.
+
+To send real emails from the application, you need to connect it to your Gmail account, setting up your email address in EMAIL_HOST_USER variable and your app password generated by your email provider in EMAIL_HOST_PASS variable.
 
 ### Google Maps API key set up
 1. In the Google Cloud Platform Console create a new project.
